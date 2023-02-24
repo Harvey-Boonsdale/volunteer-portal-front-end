@@ -6,7 +6,7 @@ import "./App.css";
 import Dashboard from "./Dashboard";
 import { ApiClient } from "./apiClient";
 // import Login from "./Login";
-// import MyNav from "./Navbar";
+import MyNav from "./Navbar";
 // import InputForm from "./InputForm";
 // import EditForm from "./EditForm";
 
@@ -40,7 +40,8 @@ function App() {
   };
 
   return (
-    <Container>
+    <Container className="container">
+      <MyNav />
       <Dashboard
         listOpportunities={listOpportunities}
         opportunities={opportunities}
