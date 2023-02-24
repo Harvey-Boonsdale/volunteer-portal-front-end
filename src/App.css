@@ -29,3 +29,9 @@
   justify-content: center;
   padding: 1rem;
 }
+
+.sibiLogo {
+  display: flex;
+  float: left;
+  width: 200;
+}
