@@ -1,0 +1,31 @@
+.container {
+  background-color: #777777;
+  margin: 0;
+}
+
+.navLink {
+  color: white;
+}
+
+.navLink:hover {
+  color: #777777;
+}
+
+.navBar {
+  display: flex;
+  float: right;
+  justify-content: center;
+  color: white;
+  background-color: #2d5f5e;
+  border-radius: 20px;
+  padding: 0.5rem;
+  width: 50%;
+  font-size: 1.5em;
+  margin: 1rem;
+}
+
+.opportunityCard {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}

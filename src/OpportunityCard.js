@@ -5,8 +5,8 @@ import "./App.css";
 
 function OpportunityCard(props) {
   return (
-    <div className="eventCard">
-      <Card bg="light" style={{ width: "18rem" }}>
+    <div className="opportunityCard">
+      <Card style={{ width: "18rem" }}>
         <Card.Body>
           <Card.Title>{props.postToDisplay.name}</Card.Title>
           <Card.Text>School: {props.postToDisplay.school} </Card.Text>
