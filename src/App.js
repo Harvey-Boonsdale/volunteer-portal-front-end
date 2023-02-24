@@ -6,8 +6,8 @@ import "./App.css";
 import Dashboard from "./Dashboard";
 import { ApiClient } from "./apiClient";
 // import Login from "./Login";
-import MyNav from "./Navbar";
-import SIBILogo from "./SIBILogo";
+import Header from "./Header";
+
 // import InputForm from "./InputForm";
 // import EditForm from "./EditForm";
 
@@ -42,8 +42,7 @@ function App() {
 
   return (
     <Container className="container">
-      <SIBILogo />
-      <MyNav />
+      <Header />
       <Dashboard
         listOpportunities={listOpportunities}
         opportunities={opportunities}
