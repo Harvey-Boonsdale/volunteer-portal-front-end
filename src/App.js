@@ -7,6 +7,7 @@ import Dashboard from "./Dashboard";
 import { ApiClient } from "./apiClient";
 // import Login from "./Login";
 import Header from "./Header";
+import Footer from "./Footer";
 
 // import InputForm from "./InputForm";
 // import EditForm from "./EditForm";
@@ -48,6 +49,7 @@ function App() {
         opportunities={opportunities}
         client={client}
       />
+      <Footer />
     </Container>
   );
 }
