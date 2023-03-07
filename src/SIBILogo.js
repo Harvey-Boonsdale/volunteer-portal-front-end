@@ -1,5 +1,5 @@
 import "./App.css";
-import sibi from "./images/sibiLogoCropped.png";
+import sibi from "./images/SIBILogo.png";
 
 function SIBILogo() {
   return (

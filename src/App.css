@@ -30,8 +30,20 @@
   padding: 1rem;
 }
 
+.logos {
+  padding: 0.5rem;
+}
+
 .sibiLogo {
   display: flex;
   float: left;
   width: 200;
+}
+
+.partnerLogos {
+  display: flex;
+  float: bottom;
+  float: right;
+  background-color: #777777;
+  padding: 1rem;
 }
