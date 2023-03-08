@@ -8,6 +8,7 @@ import { ApiClient } from "./apiClient";
 // import Login from "./Login";
 import Header from "./Header";
 import Footer from "./Footer";
+import LandingPage from "./LandingPage";
 
 // import InputForm from "./InputForm";
 // import EditForm from "./EditForm";
@@ -42,15 +43,16 @@ function App() {
   };
 
   return (
-    <Container className="container">
+    <>
       <Header />
-      <Dashboard
+      <LandingPage />
+      {/* <Dashboard
         listOpportunities={listOpportunities}
         opportunities={opportunities}
         client={client}
-      />
+      /> */}
       <Footer />
-    </Container>
+    </>
   );
 }
 

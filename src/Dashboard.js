@@ -13,11 +13,13 @@ function Dashboard(props) {
   const makeOpportunities = () => {
     return props.opportunities.map((opportunity) => {
       return (
-        <OpportunityCard
-          postToDisplay={opportunity}
-          client={props.client}
-          listEvents={props.listOpportunities}
-        />
+        <div className="cards">
+          <OpportunityCard
+            postToDisplay={opportunity}
+            client={props.client}
+            listEvents={props.listOpportunities}
+          />
+        </div>
       );
     });
   };

@@ -5,10 +5,10 @@ import "./App.css";
 
 function Header() {
   return (
-    <>
+    <div className="header">
       <SIBILogo />
       <MyNav />
-    </>
+    </div>
   );
 }
 
