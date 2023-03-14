@@ -20,10 +20,12 @@ body {
 
 .navLink {
   color: white;
+  margin: 15px;
+  text-decoration: none;
 }
 
 .navLink:hover {
-  color: #777777;
+  color: #0f0101;
 }
 
 .navBar {
@@ -49,9 +51,7 @@ body {
 
 .mainImage {
   border-radius: 35px;
-  width: 50em;
-  max-width: 80%;
-  max-height: 80%;
+  max-height: 50%;
   padding: 1rem;
 }
 
