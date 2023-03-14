@@ -2,16 +2,17 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Container from "react-bootstrap/Container";
 import "./App.css";
-// import { Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import { ApiClient } from "./apiClient";
-// import Login from "./Login";
+import Login from "./Login";
 import Header from "./Header";
 import Footer from "./Footer";
 import LandingPage from "./LandingPage";
-
-// import InputForm from "./InputForm";
-// import EditForm from "./EditForm";
+import InputForm from "./InputForm";
+import EditForm from "./EditForm";
+import AboutUs from "./AboutUs";
+import ContactUs from "./ContactUs";
 
 // initialise properties of opportunity card
 
@@ -45,12 +46,22 @@ function App() {
   return (
     <>
       <Header />
-      <LandingPage />
-      {/* <Dashboard
-        listOpportunities={listOpportunities}
-        opportunities={opportunities}
-        client={client}
-      /> */}
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route
+          path="/view"
+          element={
+            <Dashboard
+              listOpportunities={listOpportunities}
+              opportunities={opportunities}
+              client={client}
+            />
+          }
+        />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
       <Footer />
     </>
   );

@@ -1,12 +1,12 @@
 import "./App.css";
-import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
 
 function AdminLogin() {
   return (
     <div className="adminLoginButton">
-      <Button size="lg" className="loginButton">
+      <Link size="lg" className="link btn btn-primary loginButton" to="login">
         Admin Login
-      </Button>
+      </Link>
     </div>
   );
 }

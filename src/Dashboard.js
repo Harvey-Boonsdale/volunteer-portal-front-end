@@ -13,7 +13,7 @@ function Dashboard(props) {
   const makeOpportunities = () => {
     return props.opportunities.map((opportunity) => {
       return (
-        <div className="cards">
+        <div className="cards landingPage">
           <OpportunityCard
             postToDisplay={opportunity}
             client={props.client}
