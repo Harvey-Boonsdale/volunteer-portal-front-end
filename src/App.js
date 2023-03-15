@@ -13,12 +13,27 @@ import InputForm from "./InputForm";
 import EditForm from "./EditForm";
 import AboutUs from "./AboutUs";
 import ContactUs from "./ContactUs";
+import AdminDashboard from "./AdminDashboard";
 
 // initialise properties of opportunity card
 
 function App() {
+  const [token, changeToken] = useState(window.localStorage.getItem("token"));
   const [opportunities, changeOpportunities] = useState([]);
-  const client = new ApiClient();
+  const logoutHandler = () => {
+    window.localStorage.removeItem("token");
+    changeToken(undefined);
+  };
+  const loginHandler = (token) => {
+    window.localStorage.setItem("token", token);
+    changeToken(token);
+  };
+  const client = new ApiClient(
+    () => {
+      return token;
+    },
+    () => logoutHandler()
+  );
 
   // error message
 
@@ -43,11 +58,21 @@ function App() {
     });
   };
 
+  console.log(token);
   return (
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<LandingPage />} />
+        <Route
+          path="/"
+          element={
+            token ? (
+              <AdminDashboard logoutHandler={logoutHandler} />
+            ) : (
+              <LandingPage />
+            )
+          }
+        />
         <Route
           path="/view"
           element={
@@ -60,7 +85,17 @@ function App() {
         />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/contact" element={<ContactUs />} />
-        <Route path="/login" element={<Login />} />
+        <Route
+          path="/login"
+          element={
+            <Login
+              loginHandler={(token) => {
+                loginHandler(token);
+              }}
+              client={client}
+            />
+          }
+        />
       </Routes>
       <Footer />
     </>

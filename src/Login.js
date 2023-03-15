@@ -13,7 +13,6 @@ function Login(props) {
         e.target.username.value,
         e.target.password.value
       );
-      console.log(res.data.token);
       props.loginHandler(res.data.token);
     } catch (error) {
       alert("Incorrect login: please try again");
