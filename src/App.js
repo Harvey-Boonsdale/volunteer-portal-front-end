@@ -10,7 +10,6 @@ import Header from "./Header";
 import Footer from "./Footer";
 import LandingPage from "./LandingPage";
 import InputForm from "./InputForm";
-import EditForm from "./EditForm";
 import AboutUs from "./AboutUs";
 import ContactUs from "./ContactUs";
 import AdminDashboard from "./AdminDashboard";
@@ -63,16 +62,7 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route
-          path="/"
-          element={
-            token ? (
-              <AdminDashboard logoutHandler={logoutHandler} />
-            ) : (
-              <LandingPage />
-            )
-          }
-        />
+        <Route path="/" element={<LandingPage />} />
         <Route
           path="/view"
           element={
@@ -85,15 +75,20 @@ function App() {
         />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/contact" element={<ContactUs />} />
+        <Route path="/login/input" element={<InputForm />} />
         <Route
           path="/login"
           element={
-            <Login
-              loginHandler={(token) => {
-                loginHandler(token);
-              }}
-              client={client}
-            />
+            token ? (
+              <AdminDashboard logoutHandler={logoutHandler} />
+            ) : (
+              <Login
+                loginHandler={(token) => {
+                  loginHandler(token);
+                }}
+                client={client}
+              />
+            )
           }
         />
       </Routes>
