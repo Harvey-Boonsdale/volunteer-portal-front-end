@@ -1,12 +1,14 @@
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
 import "./App.css";
 
-function OpportunityCard(props) {
-  //function to register for Opportunity
+function AdminCard(props) {
+  //function to delete on click
 
-  const registrationHandler = () => {
-    alert("Registration Complete");
+  const deleteHandler = async (e) => {
+    props.client.deleteEvent(props.postToDisplay._id);
+    props.listEvents();
   };
 
   return (
@@ -34,8 +36,14 @@ function OpportunityCard(props) {
           <Card.Text>
             <strong>Location:</strong> {props.postToDisplay.location}
           </Card.Text>
-          <Button className="loginButton" onClick={() => registrationHandler()}>
-            Register for Opportunity
+          <Link
+            className="link btn btn-primary loginButton"
+            to={`/edit/${props.postToDisplay._id}`}
+          >
+            Edit Event
+          </Link>
+          <Button variant="danger" onClick={() => deleteHandler()}>
+            Delete Event
           </Button>
         </Card.Body>
       </Card>
@@ -43,4 +51,4 @@ function OpportunityCard(props) {
   );
 }
 
-export default OpportunityCard;
+export default AdminCard;

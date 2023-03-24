@@ -13,6 +13,7 @@ import InputForm from "./InputForm";
 import AboutUs from "./AboutUs";
 import ContactUs from "./ContactUs";
 import AdminDashboard from "./AdminDashboard";
+import AdminCard from "./AdminCard";
 
 // initialise properties of opportunity card
 
@@ -53,11 +54,11 @@ function App() {
         alert("Error connecting - please try again");
         return;
       }
+
       changeOpportunities(response.data);
     });
   };
 
-  console.log(token);
   return (
     <>
       <Header />
@@ -70,6 +71,7 @@ function App() {
               listOpportunities={listOpportunities}
               opportunities={opportunities}
               client={client}
+              token={token}
             />
           }
         />
