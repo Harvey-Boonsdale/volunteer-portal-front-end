@@ -5,7 +5,7 @@ function AdminLogin() {
   return (
     <div className="adminLoginButton">
       <Link size="lg" className="link btn btn-primary loginButton" to="login">
-        Admin Login
+        Admin Area
       </Link>
     </div>
   );
