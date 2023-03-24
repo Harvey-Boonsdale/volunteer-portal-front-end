@@ -77,7 +77,12 @@ function App() {
         />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/contact" element={<ContactUs />} />
-        <Route path="/login/input" element={<InputForm />} />
+        <Route
+          path="/login/input"
+          element={
+            <InputForm client={client} listOpportunities={listOpportunities} />
+          }
+        />
         <Route
           path="/login"
           element={

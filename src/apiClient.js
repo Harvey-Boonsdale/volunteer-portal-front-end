@@ -44,4 +44,26 @@ export class ApiClient {
       }
     });
   }
+
+  addOpportunity(
+    name,
+    school,
+    details,
+    time,
+    date,
+    commitment,
+    location,
+    type
+  ) {
+    return this.authenticatedCall("post", url + "opportunities", {
+      name,
+      school,
+      details,
+      time,
+      date,
+      commitment,
+      location,
+      type,
+    });
+  }
 }
