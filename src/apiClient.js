@@ -66,4 +66,7 @@ export class ApiClient {
       type,
     });
   }
+  deleteOpportunity(id) {
+    return this.authenticatedCall("delete", url + `opportunities/${id}`);
+  }
 }

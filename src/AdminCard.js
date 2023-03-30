@@ -7,8 +7,8 @@ function AdminCard(props) {
   //function to delete on click
 
   const deleteHandler = async (e) => {
-    props.client.deleteEvent(props.postToDisplay._id);
-    props.listEvents();
+    props.client.deleteOpportunity(props.postToDisplay._id);
+    props.listOpportunities();
   };
 
   return (
