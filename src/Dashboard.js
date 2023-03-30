@@ -19,7 +19,7 @@ function Dashboard(props) {
           <OpportunityCard
             postToDisplay={opportunity}
             client={props.client}
-            listEvents={props.listOpportunities}
+            listOpportunities={props.listOpportunities}
           />
         </div>
       ) : (
@@ -27,7 +27,7 @@ function Dashboard(props) {
           <AdminCard
             postToDisplay={opportunity}
             client={props.client}
-            listEvents={props.listOpportunities}
+            listOpportunities={props.listOpportunities}
           />
         </div>
       );

@@ -13,7 +13,6 @@ import InputForm from "./InputForm";
 import AboutUs from "./AboutUs";
 import ContactUs from "./ContactUs";
 import AdminDashboard from "./AdminDashboard";
-import AdminCard from "./AdminCard";
 
 // initialise properties of opportunity card
 
