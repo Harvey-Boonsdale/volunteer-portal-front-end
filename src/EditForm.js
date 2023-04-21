@@ -122,7 +122,6 @@ function EditForm(props) {
       </Form>
     </div>
   );
-  console.log(formValues);
 }
 
 export default EditForm;
