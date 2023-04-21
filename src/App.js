@@ -10,6 +10,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import LandingPage from "./LandingPage";
 import InputForm from "./InputForm";
+import EditForm from "./EditForm";
 import AboutUs from "./AboutUs";
 import ContactUs from "./ContactUs";
 import AdminDashboard from "./AdminDashboard";
@@ -80,6 +81,16 @@ function App() {
           path="/login/input"
           element={
             <InputForm client={client} listOpportunities={listOpportunities} />
+          }
+        />
+        <Route
+          path="/edit/:id"
+          element={
+            <EditForm
+              opportunities={opportunities}
+              client={client}
+              listOpportunities={listOpportunities}
+            />
           }
         />
         <Route
