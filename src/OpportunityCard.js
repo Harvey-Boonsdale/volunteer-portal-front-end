@@ -1,13 +1,10 @@
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
 import "./App.css";
 
 function OpportunityCard(props) {
   //function to register for Opportunity
-
-  const registrationHandler = () => {
-    alert("Registration Complete");
-  };
 
   return (
     <div className="opportunityCard">
@@ -34,9 +31,12 @@ function OpportunityCard(props) {
           <Card.Text>
             <strong>Location:</strong> {props.postToDisplay.location}
           </Card.Text>
-          <Button className="loginButton" onClick={() => registrationHandler()}>
+          <Link
+            className="link btn btn-primary loginButton"
+            to={`/registration/${props.postToDisplay._id}`}
+          >
             Register for Opportunity
-          </Button>
+          </Link>
         </Card.Body>
       </Card>
     </div>

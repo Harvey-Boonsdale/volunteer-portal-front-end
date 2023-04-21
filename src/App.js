@@ -14,6 +14,7 @@ import EditForm from "./EditForm";
 import AboutUs from "./AboutUs";
 import ContactUs from "./ContactUs";
 import AdminDashboard from "./AdminDashboard";
+import RegistrationForm from "./RegistrationForm";
 
 // initialise properties of opportunity card
 
@@ -107,6 +108,10 @@ function App() {
               />
             )
           }
+        />
+        <Route
+          path="/registration/:id"
+          element={<RegistrationForm opportunities={opportunities} />}
         />
       </Routes>
       <Footer />
