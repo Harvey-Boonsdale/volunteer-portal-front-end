@@ -7,8 +7,8 @@ function OpportunityCard(props) {
   //function to register for Opportunity
 
   return (
-    <div className="opportunityCard">
-      <Card style={{ width: "20rem" }}>
+    <div>
+      <Card>
         <Card.Body>
           <Card.Title>
             <strong>{props.postToDisplay.name}</strong>

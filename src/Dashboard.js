@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Container from "react-bootstrap/Container";
+import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import "./App.css";
 import OpportunityCard from "./OpportunityCard";
@@ -13,23 +13,22 @@ function Dashboard(props) {
 
   const makeOpportunities = () => {
     return props.opportunities.map((opportunity) => {
-      console.log(opportunity, props.token);
       return !props.token ? (
-        <div className="cards">
+        <Col className="cardCol">
           <OpportunityCard
             postToDisplay={opportunity}
             client={props.client}
             listOpportunities={props.listOpportunities}
           />
-        </div>
+        </Col>
       ) : (
-        <div>
+        <Col className="cardCol">
           <AdminCard
             postToDisplay={opportunity}
             client={props.client}
             listOpportunities={props.listOpportunities}
           />
-        </div>
+        </Col>
       );
     });
   };
@@ -37,10 +36,8 @@ function Dashboard(props) {
   //print opportunity card
 
   return (
-    <div>
-      <Container>
-        <Row className="cards">{makeOpportunities()}</Row>
-      </Container>
+    <div className="cardContainer">
+      <Row className="cards">{makeOpportunities()}</Row>
     </div>
   );
 }
