@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function AdminDashboard(props) {
   return (
-    <div className="landingPage">
+    <div className="adminDashboard">
       <div className="adminLoginButton">
         <Link size="lg" className="link btn btn-primary loginButton" to="input">
           Add Opportunity

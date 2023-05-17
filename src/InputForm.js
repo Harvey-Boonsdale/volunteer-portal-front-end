@@ -23,7 +23,7 @@ function InputForm(props) {
     navigate("/");
   };
   return (
-    <div className="landingPage">
+    <div className="inputForm">
       <Form onSubmit={(e) => submitHandler(e)} id="addForm">
         Opportunity Name:
         <input type="text" name="name" />
