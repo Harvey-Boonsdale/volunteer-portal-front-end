@@ -18,40 +18,15 @@ body {
   float: left;
 }
 
-.navLink {
-  color: white;
-  margin: 15px;
-  text-decoration: none;
-}
-
-.navLink:hover {
-  color: #0f0101;
-}
-
-.navBar {
-  display: flex;
-  float: right;
-  justify-content: center;
-  color: white;
-  background-color: #2d5f5e;
-  border-radius: 20px;
-  padding: 0.5rem;
-  max-width: 40%;
-  font-size: 1.2rem;
-  margin: 1rem;
-}
-
 .landingPage {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.mainImage {
-  border-radius: 35px;
-  max-height: 50%;
-  padding: 1rem;
+  margin-top: 35vh;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  text-align: center;
 }
 
 .cardContainer {
@@ -63,7 +38,7 @@ body {
 }
 
 .cards {
-  height: 80vh;
+  /* height: 80vh; */
   width: 80%;
   display: flex;
   flex-direction: row;
@@ -95,16 +70,16 @@ body {
   max-width: 50px;
 }
 
-.loginButton {
+.sibiButton {
   border: #2d5f5e;
   background-color: #2d5f5e;
 }
 
-.loginButton:hover {
+.sibiButton:hover {
   background-color: #192929;
 }
 
-.adminDashboard {
+.dashboard {
   margin-top: 45vh;
   display: flex;
   flex-direction: column;

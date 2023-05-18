@@ -49,7 +49,11 @@ function InputForm(props) {
         Type:
         <input type="text" name="type" />
         <br />
-        <Button type="submit" disabled={false}>
+        <Button
+          type="submit"
+          disabled={false}
+          className="link btn btn-primary sibiButton"
+        >
           Submit
         </Button>
       </Form>

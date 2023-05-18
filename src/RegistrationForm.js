@@ -67,7 +67,11 @@ function RegistrationForm(props) {
         Opportunity:
         <input type="text" name="name" value={formValues.name} />
         <br />
-        <Button type="submit" disabled={false}>
+        <Button
+          type="submit"
+          disabled={false}
+          className="link btn btn-primary sibiButton"
+        >
           {" "}
           Submit{" "}
         </Button>
