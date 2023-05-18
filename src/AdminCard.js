@@ -12,7 +12,7 @@ function AdminCard(props) {
   };
 
   return (
-    <div className="opportunityCard">
+    <div>
       <Card style={{ width: "20rem" }}>
         <Card.Body>
           <Card.Title>

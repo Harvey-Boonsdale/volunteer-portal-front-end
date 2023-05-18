@@ -8,7 +8,7 @@ function OpportunityCard(props) {
 
   return (
     <div>
-      <Card>
+      <Card style={{ width: "20rem" }}>
         <Card.Body>
           <Card.Title>
             <strong>{props.postToDisplay.name}</strong>
