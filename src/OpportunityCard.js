@@ -32,7 +32,7 @@ function OpportunityCard(props) {
             <strong>Location:</strong> {props.postToDisplay.location}
           </Card.Text>
           <Link
-            className="link btn btn-primary loginButton"
+            className="link btn btn-primary sibiButton"
             to={`/registration/${props.postToDisplay._id}`}
           >
             Register for Opportunity

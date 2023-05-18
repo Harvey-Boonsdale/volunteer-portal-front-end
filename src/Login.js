@@ -35,7 +35,11 @@ function Login(props) {
         <input type="password" name="password" disabled={disabled} />
         <br />
         <br />
-        <button type="submit" disabled={disabled}>
+        <button
+          type="submit"
+          disabled={disabled}
+          className="link btn btn-primary sibiButton"
+        >
           {" "}
           Submit{" "}
         </button>

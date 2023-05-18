@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 function AdminLogin() {
   return (
-    <div className="adminLoginButton">
-      <Link size="lg" className="link btn btn-primary loginButton" to="login">
+    <div>
+      <Link size="lg" className="link btn btn-primary sibiButton" to="login">
         Admin Area
       </Link>
     </div>

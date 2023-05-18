@@ -1,18 +1,16 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Container from "react-bootstrap/Container";
+
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import { ApiClient } from "./apiClient";
 import Login from "./Login";
-import Header from "./Header";
-import Footer from "./Footer";
+
 import LandingPage from "./LandingPage";
 import InputForm from "./InputForm";
 import EditForm from "./EditForm";
-import AboutUs from "./AboutUs";
-import ContactUs from "./ContactUs";
+
 import AdminDashboard from "./AdminDashboard";
 import RegistrationForm from "./RegistrationForm";
 
@@ -62,7 +60,6 @@ function App() {
 
   return (
     <>
-      <Header />
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route
@@ -76,8 +73,7 @@ function App() {
             />
           }
         />
-        <Route path="/about" element={<AboutUs />} />
-        <Route path="/contact" element={<ContactUs />} />
+
         <Route
           path="/login/input"
           element={
@@ -114,7 +110,6 @@ function App() {
           element={<RegistrationForm opportunities={opportunities} />}
         />
       </Routes>
-      <Footer />
     </>
   );
 }

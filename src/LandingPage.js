@@ -1,13 +1,17 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import HBImage from "./HenryBootImage";
+import Header from "./Header";
 import ViewOpportunitiesButton from "./ViewOpportunitiesButton";
+import WelcomeText from "./WelcomeText";
+import Footer from "./Footer";
 
 function LandingPage() {
   return (
     <div className="landingPage">
-      <HBImage />
+      <Header />
+      <WelcomeText />
       <ViewOpportunitiesButton />
+      <Footer />
     </div>
   );
 }

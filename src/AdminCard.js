@@ -37,7 +37,7 @@ function AdminCard(props) {
             <strong>Location:</strong> {props.postToDisplay.location}
           </Card.Text>
           <Link
-            className="link btn btn-primary loginButton"
+            className="link btn btn-primary sibiButton"
             to={`/edit/${props.postToDisplay._id}`}
           >
             Edit Event
