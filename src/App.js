@@ -6,6 +6,7 @@ import { Routes, Route } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import { ApiClient } from "./apiClient";
 import Login from "./Login";
+import Header from "./Header";
 
 import LandingPage from "./LandingPage";
 import InputForm from "./InputForm";
@@ -60,6 +61,7 @@ function App() {
 
   return (
     <>
+      <Header />
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route
