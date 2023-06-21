@@ -13,6 +13,7 @@ function InputForm(props) {
       e.target.name.value,
       e.target.school.value,
       e.target.details.value,
+      e.target.year.value,
       e.target.startTime.value,
       e.target.finishTime.value,
       e.target.date.value,
@@ -92,6 +93,21 @@ function InputForm(props) {
         <label for="details">Details:</label>
         <textarea type="text" rows="4" cols="50" name="details" />
         <br />
+        <label for="year">Year Group:</label>
+        <select name="school">
+          <option value="Y7">Year 7</option>
+          <option value="Y8">Year 8</option>
+          <option value="Y9">Year 9</option>
+          <option value="Y10">Year 10</option>
+          <option value="Y11">Year 11</option>
+          <option value="Y12">Year 12</option>
+          <option value="Y13">Year 13</option>
+          <option value="Y13">Year 14</option>
+          <option value="Sixth Form College">Sixth Form College</option>
+          <option value="various">Various Year Groups</option>
+          <option value="other">Other</option>
+        </select>
+        <br />
         <label for="startTime">Start Time:</label>
         <input type="time" name="startTime" />
         <br />
@@ -147,6 +163,12 @@ function InputForm(props) {
           </option>
           <option value="Other">Other</option>
         </select>
+        <br />
+        <label for="Additional Info">Additional Info:</label>
+        <textarea type="text" rows="4" cols="50" name="details" />
+        <br />
+        <label for="Special School">Special School:</label>
+        <input type="checkbox" id="yes" name="yes" value="true"></input>
         <br />
         <Button
           type="submit"
