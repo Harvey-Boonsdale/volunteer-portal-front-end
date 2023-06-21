@@ -20,7 +20,8 @@ function InputForm(props) {
       e.target.commitment.value,
       e.target.location.value,
       e.target.type.value,
-      e.target.info.value
+      e.target.info.value,
+      e.target.special.value
     );
     props.listOpportunities();
     navigate("/");
@@ -164,10 +165,10 @@ function InputForm(props) {
           <option value="Other">Other</option>
         </select>
         <br />
-        <label for="Additional Info">Additional Info:</label>
+        <label for="info">Additional Info:</label>
         <textarea type="text" rows="4" cols="50" name="details" />
         <br />
-        <label for="Special School">Special School:</label>
+        <label for="special">Special School:</label>
         <input type="checkbox" id="yes" name="yes" value="true"></input>
         <br />
         <Button

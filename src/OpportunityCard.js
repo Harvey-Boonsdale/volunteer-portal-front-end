@@ -8,19 +8,23 @@ function OpportunityCard(props) {
 
   return (
     <div>
-      <Card style={{ width: "20rem" }}>
+      <Card style={{ width: "27rem" }}>
         <Card.Body>
           <Card.Title>
             <strong>{props.postToDisplay.name}</strong>
           </Card.Title>
-          <Card.Text>
-            <strong>School:</strong> {props.postToDisplay.school}{" "}
-          </Card.Text>
+          <Card.Text>{props.postToDisplay.school} </Card.Text>
           <Card.Text>
             <strong>Details:</strong> {props.postToDisplay.details}
           </Card.Text>
           <Card.Text>
-            <strong>Time:</strong> {props.postToDisplay.time}
+            <strong>Year Group:</strong> {props.postToDisplay.year}
+          </Card.Text>
+          <Card.Text>
+            <strong>Start Time:</strong> {props.postToDisplay.startTime}
+          </Card.Text>
+          <Card.Text>
+            <strong>Finish Time:</strong> {props.postToDisplay.finishTime}
           </Card.Text>
           <Card.Text>
             <strong>Date:</strong> {props.postToDisplay.date}
@@ -30,6 +34,9 @@ function OpportunityCard(props) {
           </Card.Text>
           <Card.Text>
             <strong>Location:</strong> {props.postToDisplay.location}
+          </Card.Text>
+          <Card.Text>
+            <strong>Additional Info:</strong> {props.postToDisplay.info}
           </Card.Text>
           <Link
             className="link btn btn-primary sibiButton"
