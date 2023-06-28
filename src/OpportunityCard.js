@@ -23,7 +23,6 @@ function OpportunityCard(props) {
               {props.postToDisplay.name} at {props.postToDisplay.school}
             </strong>
           </Card.Title>
-
           <Card.Text>
             <strong>Details:</strong> {props.postToDisplay.details}
           </Card.Text>
