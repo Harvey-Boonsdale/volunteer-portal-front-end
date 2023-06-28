@@ -6,9 +6,8 @@ import Button from "react-bootstrap/Button";
 function InputForm(props) {
   const navigate = useNavigate();
   const submitHandler = async (e) => {
-    console.log("Event Added!");
     e.preventDefault();
-
+    console.log(e.target.name.value);
     props.client.addOpportunity(
       e.target.name.value,
       e.target.school.value,
@@ -20,19 +19,18 @@ function InputForm(props) {
       e.target.commitment.value,
       e.target.location.value,
       e.target.type.value,
-      e.target.info.value,
-      e.target.special.value
+      e.target.info.value
     );
     props.listOpportunities();
-    navigate("/");
+    // navigate("/");
   };
   return (
     <div className="inputForm">
       <Form onSubmit={(e) => submitHandler(e)} id="addForm">
-        <label for="name">Opportunity Name:</label>
+        <label htmlFor="name">Opportunity Name:</label>
         <input type="text" name="name" />
         <br />
-        <label for="school">School / College:</label>
+        <label htmlFor="school">School / College:</label>
         <select name="school">
           <option value="All Saints Catholic High School">
             All Saints Catholic High School
@@ -91,11 +89,11 @@ function InputForm(props) {
           <option value="other">Other</option>
         </select>
         <br />
-        <label for="details">Details:</label>
+        <label htmlFor="details">Details:</label>
         <textarea type="text" rows="4" cols="50" name="details" />
         <br />
-        <label for="year">Year Group:</label>
-        <select name="school">
+        <label htmlFor="year">Year Group:</label>
+        <select name="year">
           <option value="Y7">Year 7</option>
           <option value="Y8">Year 8</option>
           <option value="Y9">Year 9</option>
@@ -109,16 +107,16 @@ function InputForm(props) {
           <option value="other">Other</option>
         </select>
         <br />
-        <label for="startTime">Start Time:</label>
+        <label htmlFor="startTime">Start Time:</label>
         <input type="time" name="startTime" />
         <br />
-        <label for="finishTime">Finish Time:</label>
+        <label htmlFor="finishTime">Finish Time:</label>
         <input type="time" name="finishTime" />
         <br />
-        <label for="date">Date:</label>
+        <label htmlFor="date">Date:</label>
         <input type="date" name="date" />
         <br />
-        <label for="commitment">Time Commitment:</label>
+        <label htmlFor="commitment">Time Commitment:</label>
         <select name="commitment">
           <option value="Ongoing">Ongoing</option>
           <option value="To be agreed">To be agreed</option>
@@ -135,7 +133,7 @@ function InputForm(props) {
           <option value="7 hours">7 hours</option>
         </select>
         <br />
-        <label for="location">Location:</label>
+        <label htmlFor="location">Location:</label>
         <select name="location">
           <option value="At School / College">At School / College</option>
           <option value="At your workplace">At your workplace</option>
@@ -144,7 +142,7 @@ function InputForm(props) {
           <option value="To be agreed">To be agreed</option>
         </select>
         <br />
-        <label for="type">Type:</label>
+        <label htmlFor="type">Type:</label>
         <select name="type">
           <option value="Mock Interviews">Mock Interviews</option>
           <option value="Workplace Visit">Workplace Visit</option>
@@ -165,12 +163,10 @@ function InputForm(props) {
           <option value="Other">Other</option>
         </select>
         <br />
-        <label for="info">Additional Info:</label>
-        <textarea type="text" rows="4" cols="50" name="details" />
+        <label htmlFor="info">Additional Info:</label>
+        <textarea type="text" rows="4" cols="50" name="info" />
         <br />
-        <label for="special">Special School:</label>
-        <input type="checkbox" id="yes" name="yes" value="true"></input>
-        <br />
+
         <Button
           type="submit"
           disabled={false}
