@@ -49,21 +49,27 @@ export class ApiClient {
     name,
     school,
     details,
-    time,
+    year,
+    startTime,
+    finishTime,
     date,
     commitment,
     location,
-    type
+    type,
+    info
   ) {
     return this.authenticatedCall("post", url + "opportunities", {
       name,
       school,
       details,
-      time,
+      year,
+      startTime,
+      finishTime,
       date,
       commitment,
       location,
       type,
+      info,
     });
   }
 

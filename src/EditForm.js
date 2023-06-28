@@ -24,14 +24,14 @@ function EditForm(props) {
     name: findOpportunity.name,
     school: findOpportunity.school,
     details: findOpportunity.details,
-    details: findOpportunity.year,
+    year: findOpportunity.year,
     startTime: findOpportunity.startTime,
     finishTime: findOpportunity.finishTime,
     date: findOpportunity.date,
     commitment: findOpportunity.commitment,
     location: findOpportunity.location,
-    type: findOpportunity.type,
     info: findOpportunity.info,
+    type: findOpportunity.type,
   });
 
   const handleChange = (opportunity) => {

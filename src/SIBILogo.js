@@ -5,11 +5,9 @@ import { Link } from "react-router-dom";
 function SIBILogo() {
   return (
     <div className="sibiLogo">
-      <a>
-        <Link to="/">
-          <img src={sibi} alt="See it Be it Logo" />
-        </Link>
-      </a>
+      <Link to="/">
+        <img src={sibi} alt="See it Be it Logo" />
+      </Link>
     </div>
   );
 }
