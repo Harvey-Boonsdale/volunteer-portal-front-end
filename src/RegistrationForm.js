@@ -18,6 +18,7 @@ function RegistrationForm(props) {
 
   const [formValues] = useState({
     name: findOpportunity.name,
+    school: findOpportunity.school,
   });
 
   const submitHandler = (e) => {
@@ -46,7 +47,9 @@ function RegistrationForm(props) {
   return (
     <div className="landingPage">
       <p>Please Provide Your Details to Register</p>
-      <p>Opportunity Name: {formValues.name}</p>
+      <p>
+        Opportunity Name: {formValues.name} at {formValues.school}{" "}
+      </p>
 
       <Form ref={form} onSubmit={(e) => submitHandler(e)}>
         Full Name:
@@ -66,6 +69,9 @@ function RegistrationForm(props) {
         <br />
         Opportunity:
         <input type="text" name="name" value={formValues.name} />
+        <br />
+        School / College:
+        <input type="text" name="school" value={formValues.school} />
         <br />
         <Button
           type="submit"
