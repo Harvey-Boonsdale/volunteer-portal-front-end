@@ -8,11 +8,9 @@ function OpportunityCard(props) {
 
   const isoString = props.postToDisplay.date;
 
-  const formatted = DateTime.fromISO(isoString)
+  const formattedDate = DateTime.fromISO(isoString)
     .setZone("UTC")
     .toLocaleString(DateTime.DATE_FULL);
-
-  console.log(formatted);
 
   return (
     <div>
@@ -27,7 +25,7 @@ function OpportunityCard(props) {
             <strong>Details:</strong> {props.postToDisplay.details}
           </Card.Text>
           <Card.Text>
-            <strong>Date:</strong> {formatted}
+            <strong>Date:</strong> {formattedDate}
           </Card.Text>
           <Card.Text>
             <strong>Start:</strong> {props.postToDisplay.startTime}{" "}
