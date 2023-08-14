@@ -83,6 +83,7 @@ function InputForm(props) {
           <option value="Talbot Specialist School">
             Talbot Specialist School
           </option>
+          <option value="Tapton">Tapton</option>
           <option value="The Sheffield College">The Sheffield College</option>
           <option value="Westfield School">Westfield School</option>
           <option value="Yewlands Academy">Yewlands Academy</option>
