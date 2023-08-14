@@ -14,7 +14,7 @@ function OpportunityCard(props) {
 
   return (
     <div>
-      <Card style={{ width: "20rem", height: "32rem " }}>
+      <Card style={{ width: "40rem" }}>
         <Card.Body>
           <Card.Title>
             <strong>
@@ -25,11 +25,9 @@ function OpportunityCard(props) {
             <strong>Details:</strong> {props.postToDisplay.details}
           </Card.Text>
           <Card.Text>
-            <strong>Date:</strong> {formattedDate}
-          </Card.Text>
-          <Card.Text>
-            <strong>Start:</strong> {props.postToDisplay.startTime}{" "}
-            <strong>Finish:</strong> {props.postToDisplay.finishTime}
+            <strong>Date:</strong> {formattedDate} <strong>Start Time:</strong>{" "}
+            {props.postToDisplay.startTime} <strong>Finish Time:</strong>{" "}
+            {props.postToDisplay.finishTime}
           </Card.Text>
 
           <Card.Text>
