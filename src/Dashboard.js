@@ -14,21 +14,25 @@ function Dashboard(props) {
   const makeOpportunities = () => {
     return props.opportunities.map((opportunity) => {
       return !props.token ? (
-        <Col className="cardCol">
-          <OpportunityCard
-            postToDisplay={opportunity}
-            client={props.client}
-            listOpportunities={props.listOpportunities}
-          />
-        </Col>
+        <Row>
+          <Col className="cardCol">
+            <OpportunityCard
+              postToDisplay={opportunity}
+              client={props.client}
+              listOpportunities={props.listOpportunities}
+            />
+          </Col>
+        </Row>
       ) : (
-        <Col className="cardCol">
-          <AdminCard
-            postToDisplay={opportunity}
-            client={props.client}
-            listOpportunities={props.listOpportunities}
-          />
-        </Col>
+        <Row>
+          <Col className="cardCol">
+            <AdminCard
+              postToDisplay={opportunity}
+              client={props.client}
+              listOpportunities={props.listOpportunities}
+            />
+          </Col>
+        </Row>
       );
     });
   };
