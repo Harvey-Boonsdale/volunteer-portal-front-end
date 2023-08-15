@@ -43,7 +43,7 @@ function OpportunityCard(props) {
             <strong>Additional Info:</strong> {props.postToDisplay.info}
           </Card.Text>
           <Link
-            className="link btn btn-primary sibiButton"
+            className="link btn btn-primary sibiButton registerButton"
             to={`/registration/${props.postToDisplay._id}`}
           >
             Register for Opportunity

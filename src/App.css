@@ -68,6 +68,10 @@ body {
   background-color: #192929;
 }
 
+.registerButton {
+  float: right;
+}
+
 .dashboard {
   margin-top: 45vh;
   display: flex;
