@@ -14,7 +14,7 @@ function OpportunityCard(props) {
 
   return (
     <div>
-      <Card style={{ width: "40rem" }}>
+      <Card>
         <Card.Body>
           <Card.Title>
             <strong>
