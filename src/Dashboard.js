@@ -14,7 +14,7 @@ function Dashboard(props) {
   const makeOpportunities = () => {
     return props.opportunities.map((opportunity) => {
       return !props.token ? (
-        <Row>
+        <Row className="col-md-10 col-lg-8">
           <Col className="cardCol">
             <OpportunityCard
               postToDisplay={opportunity}
@@ -24,7 +24,7 @@ function Dashboard(props) {
           </Col>
         </Row>
       ) : (
-        <Row>
+        <Row className="col-md-10 col-lg-8">
           <Col className="cardCol">
             <AdminCard
               postToDisplay={opportunity}

@@ -22,7 +22,7 @@ function AdminCard(props) {
 
   return (
     <div>
-      <Card style={{ width: "20rem", height: "32rem" }}>
+      <Card>
         <Card.Body>
           <Card.Title>
             <strong>
