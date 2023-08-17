@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
 function InputForm(props) {
+  const [showDateTime, setShowDateTime] = useState(false);
+  const handleCheckboxChange = () => {
+    setShowDateTime(!showDateTime);
+  };
   const navigate = useNavigate();
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -13,6 +17,7 @@ function InputForm(props) {
       e.target.school.value,
       e.target.details.value,
       e.target.year.value,
+      e.target.set.value,
       e.target.startTime.value,
       e.target.finishTime.value,
       e.target.date.value,
@@ -108,14 +113,26 @@ function InputForm(props) {
           <option value="other">Other</option>
         </select>
         <br />
-        <label htmlFor="startTime">Start Time:</label>
-        <input type="time" name="startTime" />
+        <label htmlFor="set">Set date:</label>
+        <input
+          type="checkbox"
+          name="set"
+          checked={showDateTime}
+          onChange={handleCheckboxChange}
+        />
         <br />
-        <label htmlFor="finishTime">Finish Time:</label>
-        <input type="time" name="finishTime" />
-        <br />
-        <label htmlFor="date">Date:</label>
-        <input type="date" name="date" />
+        {showDateTime && (
+          <div>
+            <label htmlFor="startTime">Start Time:</label>
+            <input type="time" name="startTime" />
+
+            <label htmlFor="finishTime">Finish Time:</label>
+            <input type="time" name="finishTime" />
+            <br />
+            <label htmlFor="date">Date:</label>
+            <input type="date" name="date" />
+          </div>
+        )}
         <br />
         <label htmlFor="commitment">Time Commitment:</label>
         <select name="commitment">
