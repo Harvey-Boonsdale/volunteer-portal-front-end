@@ -12,6 +12,15 @@ function OpportunityCard(props) {
     .setZone("UTC")
     .toLocaleString(DateTime.DATE_FULL);
 
+  // console.log(formattedDate);
+
+  // if ((props.postToDisplay.formattedDate = "Invalid DateTime")) {
+  //   console.log("Date to be agreed");
+  // }
+
+  // const isTba = props.postToDisplay.tba;
+  // console.log(isTba);
+
   return (
     <div>
       <Card>
@@ -25,9 +34,16 @@ function OpportunityCard(props) {
             <strong>Details:</strong> {props.postToDisplay.details}
           </Card.Text>
           <Card.Text>
-            <strong>Date:</strong> {formattedDate} <strong>Start Time:</strong>{" "}
-            {props.postToDisplay.startTime} <strong>Finish Time:</strong>{" "}
-            {props.postToDisplay.finishTime}
+            {formattedDate === "Invalid DateTime" ? (
+              <div>Date and time to be agreed</div>
+            ) : (
+              <div>
+                <strong>Date:</strong> {formattedDate}{" "}
+                <strong>Start Time: </strong>
+                {props.postToDisplay.startTime} <strong>Finish Time:</strong>{" "}
+                {props.postToDisplay.finishTime}
+              </div>
+            )}
           </Card.Text>
 
           <Card.Text>

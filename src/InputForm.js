@@ -1,23 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
 function InputForm(props) {
-  const [showDateTime, setShowDateTime] = useState(false);
-  const handleCheckboxChange = () => {
-    setShowDateTime(!showDateTime);
-  };
   const navigate = useNavigate();
   const submitHandler = async (e) => {
     e.preventDefault();
-    console.log(e.target.name.value);
     props.client.addOpportunity(
       e.target.name.value,
       e.target.school.value,
       e.target.details.value,
       e.target.year.value,
-      e.target.set.value,
       e.target.startTime.value,
       e.target.finishTime.value,
       e.target.date.value,
@@ -27,7 +21,8 @@ function InputForm(props) {
       e.target.info.value
     );
     props.listOpportunities();
-    // navigate("/");
+    alert("Opportunity Added");
+    navigate("/");
   };
   return (
     <div className="inputForm">
@@ -92,13 +87,16 @@ function InputForm(props) {
           <option value="The Sheffield College">The Sheffield College</option>
           <option value="Westfield School">Westfield School</option>
           <option value="Yewlands Academy">Yewlands Academy</option>
+          <option value="multiple schools / colleges">
+            Multiple Schools / Colleges
+          </option>
           <option value="other">Other</option>
         </select>
         <br />
         <label htmlFor="details">Details:</label>
         <textarea type="text" rows="4" cols="50" name="details" />
         <br />
-        <label htmlFor="year">Year Group:</label>
+        <label htmlFor="year">Year Group: </label>
         <select name="year">
           <option value="Y7">Year 7</option>
           <option value="Y8">Year 8</option>
@@ -113,26 +111,32 @@ function InputForm(props) {
           <option value="other">Other</option>
         </select>
         <br />
-        <label htmlFor="set">Set date:</label>
-        <input
-          type="checkbox"
-          name="set"
-          checked={showDateTime}
-          onChange={handleCheckboxChange}
-        />
+        <label htmlFor="date">
+          Date <span>&#40;leave blank if not known</span>
+          <span>&#41;</span>:
+        </label>
+        <input type="date" name="date" />
         <br />
-        {showDateTime && (
-          <div>
-            <label htmlFor="startTime">Start Time:</label>
-            <input type="time" name="startTime" />
 
-            <label htmlFor="finishTime">Finish Time:</label>
-            <input type="time" name="finishTime" />
-            <br />
-            <label htmlFor="date">Date:</label>
-            <input type="date" name="date" />
-          </div>
-        )}
+        <label htmlFor="startTime">
+          Start Time <span>&#40;leave blank if not known</span>
+          <span>&#41;</span>:
+        </label>
+        <input type="time" name="startTime" />
+        <br />
+
+        <label htmlFor="finishTime">
+          Finish Time <span>&#40;leave blank if not known</span>
+          <span>&#41;</span>:
+        </label>
+        <input type="time" name="finishTime" />
+
+        <br />
+        <label htmlFor="tba">Is exact time / date still to be agreed?</label>
+        <select name="tba">
+          <option value="yes">Yes</option>
+          <option value="No">No</option>
+        </select>
         <br />
         <label htmlFor="commitment">Time Commitment:</label>
         <select name="commitment">
