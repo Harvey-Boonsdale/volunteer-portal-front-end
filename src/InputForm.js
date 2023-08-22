@@ -28,9 +28,11 @@ function InputForm(props) {
     <div className="inputForm">
       <Form onSubmit={(e) => submitHandler(e)} id="addForm">
         <label htmlFor="name">Opportunity Name:</label>
+        <br />
         <input type="text" name="name" />
         <br />
         <label htmlFor="school">School / College:</label>
+        <br />
         <select name="school">
           <option value="All Saints Catholic High School">
             All Saints Catholic High School
@@ -94,9 +96,11 @@ function InputForm(props) {
         </select>
         <br />
         <label htmlFor="details">Details:</label>
+        <br />
         <textarea type="text" rows="4" cols="50" name="details" />
         <br />
         <label htmlFor="year">Year Group: </label>
+        <br />
         <select name="year">
           <option value="Y7">Year 7</option>
           <option value="Y8">Year 8</option>
@@ -112,6 +116,7 @@ function InputForm(props) {
         </select>
         <br />
         <label htmlFor="tba">Is exact time / date still to be agreed?</label>
+        <br />
         <select name="tba">
           <option value="yes">Yes</option>
           <option value="No">No</option>
@@ -121,6 +126,7 @@ function InputForm(props) {
           Date <span>&#40;leave blank if not known</span>
           <span>&#41;</span>:
         </label>
+        <br />
         <input type="date" name="date" />
         <br />
 
@@ -128,6 +134,7 @@ function InputForm(props) {
           Start Time <span>&#40;leave blank if not known</span>
           <span>&#41;</span>:
         </label>
+        <br />
         <input type="time" name="startTime" />
         <br />
 
@@ -135,10 +142,12 @@ function InputForm(props) {
           Finish Time <span>&#40;leave blank if not known</span>
           <span>&#41;</span>:
         </label>
+        <br />
         <input type="time" name="finishTime" />
 
         <br />
         <label htmlFor="commitment">Time Commitment:</label>
+        <br />
         <select name="commitment">
           <option value="Ongoing">Ongoing</option>
           <option value="To be agreed">To be agreed</option>
@@ -156,6 +165,7 @@ function InputForm(props) {
         </select>
         <br />
         <label htmlFor="location">Location:</label>
+        <br />
         <select name="location">
           <option value="At School / College">At School / College</option>
           <option value="At your workplace">At your workplace</option>
@@ -165,6 +175,7 @@ function InputForm(props) {
         </select>
         <br />
         <label htmlFor="type">Type:</label>
+        <br />
         <select name="type">
           <option value="Mock Interviews">Mock Interviews</option>
           <option value="Workplace Visit">Workplace Visit</option>
@@ -186,6 +197,7 @@ function InputForm(props) {
         </select>
         <br />
         <label htmlFor="info">Additional Info:</label>
+        <br />
         <textarea type="text" rows="4" cols="50" name="info" />
         <br />
 
