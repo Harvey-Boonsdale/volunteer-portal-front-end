@@ -48,6 +48,7 @@ function EditForm(props) {
     navigate("/");
   };
 
+  console.log(formValues.school);
   return (
     <div className="landingPage">
       <p>Edit Opportunity</p>
@@ -114,6 +115,7 @@ function EditForm(props) {
           <option value="Talbot Specialist School">
             Talbot Specialist School
           </option>
+          <option value="Tapton">Tapton</option>
           <option value="The Sheffield College">The Sheffield College</option>
           <option value="Westfield School">Westfield School</option>
           <option value="Yewlands Academy">Yewlands Academy</option>
@@ -148,56 +150,100 @@ function EditForm(props) {
           onChange={(opportunity) => handleChange(opportunity)}
         </select>
         <br />
-        Start Time:
-        <input
-          type="time"
-          name="startTime"
-          value={formValues.startTime}
+        <label htmlFor="tba">Is exact time / date still to be agreed?</label>
+        <select name="tba">
+          <option value="yes">Yes</option>
+          <option value="No">No</option>
           onChange={(opportunity) => handleChange(opportunity)}
-        />
-        Finish Time:
-        <input
-          type="time"
-          name="finishTime"
-          value={formValues.finishTime}
-          onChange={(opportunity) => handleChange(opportunity)}
-        />
+        </select>
         <br />
-        Date:
+        <label htmlFor="date">
+          Date <span>&#40;leave blank if TBA</span>
+          <span>&#41;</span>:
+        </label>
         <input
           type="date"
           name="date"
-          value={formValues.date}
+          onChange={(opportunity) => handleChange(opportunity)}
+        />
+        <br />
+        <label htmlFor="startTime">
+          Start Time <span>&#40;leave blank if TBA</span>
+          <span>&#41;</span>:
+        </label>
+        <input
+          type="time"
+          name="startTime"
+          onChange={(opportunity) => handleChange(opportunity)}
+        />
+        <br />
+        <label htmlFor="finishTime">
+          Finish Time <span>&#40;leave blank if TBA</span>
+          <span>&#41;</span>:
+        </label>
+        <input
+          type="time"
+          name="finishTime"
           onChange={(opportunity) => handleChange(opportunity)}
         />
         <br />
         Commitment:
-        <input
-          type="text"
-          name="commitment"
+        <select name="commitment">
           value={formValues.commitment}
+          <option value="Ongoing">Ongoing</option>
+          <option value="To be agreed">To be agreed</option>
+          <option value="1 hour">1 hour</option>
+          <option value="1.5 hours">1.5 hours</option>
+          <option value="2 hours">2 hours</option>
+          <option value="2.5 hours">2.5 hours</option>
+          <option value="3 hours">3 hours</option>
+          <option value="3.5 hours">3.5 hours</option>
+          <option value="4 hours">4 hours</option>
+          <option value="5 hours">5 hours</option>
+          <option value="6 hours">6 hours</option>
+          <option value="7 hours">7 hours</option>
           onChange={(opportunity) => handleChange(opportunity)}
-        />
+        </select>
         <br />
         Location:
-        <input
-          type="text"
-          name="location"
+        <select name="location">
           value={formValues.location}
+          <option value="At School / College">At School / College</option>
+          <option value="At your workplace">At your workplace</option>
+          <option value="Remote">Remote</option>
+          <option value="Other">Other</option>
+          <option value="To be agreed">To be agreed</option>
           onChange={(opportunity) => handleChange(opportunity)}
-        />
+        </select>
         <br />
         Type:
-        <input
-          type="text"
-          name="type"
+        <select name="type">
           value={formValues.type}
+          <option value="Mock Interviews">Mock Interviews</option>
+          <option value="Workplace Visit">Workplace Visit</option>
+          <option value="Careers Talk">Careers Talk</option>
+          <option value="Mentoring">Mentoring</option>
+          <option value="Enterprise Skills">Enterprise Skills</option>
+          <option value="Virtual Work Experience">
+            Virtual Work Experience
+          </option>
+          <option value="What's my Line">What's my Line</option>
+          <option value="Careers in the Curriculum">
+            Careers in the Curriculum
+          </option>
+          <option value="CV / Interview Skills">CV / Interview Skills</option>
+          <option value="Employability Skills Workshop">
+            Employability Skills Workshop
+          </option>
+          <option value="Other">Other</option>
           onChange={(opportunity) => handleChange(opportunity)}
-        />
+        </select>
         <br />
         Additional Info:
-        <input
+        <textarea
           type="text"
+          rows="4"
+          cols="50"
           name="info"
           value={formValues.info}
           onChange={(opportunity) => handleChange(opportunity)}

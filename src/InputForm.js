@@ -111,6 +111,12 @@ function InputForm(props) {
           <option value="other">Other</option>
         </select>
         <br />
+        <label htmlFor="tba">Is exact time / date still to be agreed?</label>
+        <select name="tba">
+          <option value="yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+        <br />
         <label htmlFor="date">
           Date <span>&#40;leave blank if not known</span>
           <span>&#41;</span>:
@@ -131,12 +137,6 @@ function InputForm(props) {
         </label>
         <input type="time" name="finishTime" />
 
-        <br />
-        <label htmlFor="tba">Is exact time / date still to be agreed?</label>
-        <select name="tba">
-          <option value="yes">Yes</option>
-          <option value="No">No</option>
-        </select>
         <br />
         <label htmlFor="commitment">Time Commitment:</label>
         <select name="commitment">

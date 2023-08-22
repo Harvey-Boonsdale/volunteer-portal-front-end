@@ -29,16 +29,20 @@ function AdminCard(props) {
               {props.postToDisplay.name} at {props.postToDisplay.school}{" "}
             </strong>
           </Card.Title>
-
           <Card.Text>
             <strong>Details:</strong> {props.postToDisplay.details}
           </Card.Text>
           <Card.Text>
-            <strong>Date:</strong> {formattedDate}
-          </Card.Text>
-          <Card.Text>
-            <strong>Start Time:</strong> {props.postToDisplay.startTime}{" "}
-            <strong>Finish Time:</strong> {props.postToDisplay.finishTime}
+            {formattedDate === "Invalid DateTime" ? (
+              <div>Date and time to be agreed</div>
+            ) : (
+              <div>
+                <strong>Date:</strong> {formattedDate}{" "}
+                <strong>Start Time: </strong>
+                {props.postToDisplay.startTime} <strong>Finish Time:</strong>{" "}
+                {props.postToDisplay.finishTime}
+              </div>
+            )}
           </Card.Text>
           <Card.Text>
             <strong>Year Group:</strong> {props.postToDisplay.year}
@@ -56,10 +60,10 @@ function AdminCard(props) {
             className="link btn btn-primary sibiButton"
             to={`/edit/${props.postToDisplay._id}`}
           >
-            Edit Event
-          </Link>
+            Edit Opportunity
+          </Link>{" "}
           <Button variant="danger" onClick={() => deleteHandler()}>
-            Delete Event
+            Delete Opportunity
           </Button>
         </Card.Body>
       </Card>
