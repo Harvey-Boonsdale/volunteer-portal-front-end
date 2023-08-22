@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useRef } from "react";
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Button from "react-bootstrap/Button";
@@ -15,6 +16,7 @@ function RegistrationForm(props) {
   const findOpportunity = props.opportunities.find((opportunity) => {
     return opportunity._id === id;
   });
+  const navigate = useNavigate();
 
   const [formValues] = useState({
     name: findOpportunity.name,
@@ -36,6 +38,7 @@ function RegistrationForm(props) {
           alert(
             "Thank you for registering - the See it Be it Team will be in touch shortly"
           );
+          navigate("/");
         },
         (error) => {
           console.log(error.text);
@@ -45,33 +48,47 @@ function RegistrationForm(props) {
   };
 
   return (
-    <div className="landingPage">
-      <p>Please Provide Your Details to Register</p>
-      <p>
+    <div className="inputForm">
+      <h3>Please Provide Your Details to Register</h3>
+      <h6>
         Opportunity Name: {formValues.name} at {formValues.school}{" "}
-      </p>
+      </h6>
 
       <Form ref={form} onSubmit={(e) => submitHandler(e)}>
         Full Name:
-        <input type="text" name="volName" required />
+        <br />
+        <textarea type="text" rows="1" cols="50" name="volName" required />
         <br />
         Employer / Business:
-        <input type="text" name="employer" required />
+        <br />
+        <textarea type="text" rows="1" cols="50" name="employer" required />
         <br />
         Job Title:
-        <input type="text" name="job" required />
+        <br />
+        <textarea type="text" rows="1" cols="50" name="job" required />
         <br />
         Email Address:
-        <input type="email" name="email" required />
+        <br />
+        <textarea type="email" rows="1" cols="50" name="email" required />
         <br />
         Contact Number:
-        <input type="text" name="contactNumber" required />
+        <br />
+        <textarea
+          type="text"
+          rows="1"
+          cols="50"
+          name="contactNumber"
+          required
+        />
         <br />
         Opportunity:
+        <br />
         <input type="text" name="name" value={formValues.name} />
         <br />
         School / College:
+        <br />
         <input type="text" name="school" value={formValues.school} />
+        <br />
         <br />
         <Button
           type="submit"

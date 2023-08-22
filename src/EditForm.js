@@ -48,12 +48,15 @@ function EditForm(props) {
     navigate("/");
   };
 
+  // check value going in
   console.log(formValues.school);
+
   return (
-    <div className="landingPage">
+    <div className="inputForm">
       <p>Edit Opportunity</p>
       <Form onSubmit={(e) => submitHandler(e)} id="editForm">
         <label for="name">Opportunity Name:</label>
+        <br />
         <input
           type="text"
           name="name"
@@ -62,6 +65,7 @@ function EditForm(props) {
         />
         <br />
         <label for="school">School / College:</label>
+        <br />
         <select name="school">
           value={formValues.school}
           <option value="All Saints Catholic High School">
@@ -124,6 +128,7 @@ function EditForm(props) {
         </select>
         <br />
         Details:
+        <br />
         <textarea
           type="text"
           rows="4"
@@ -134,6 +139,7 @@ function EditForm(props) {
         />
         <br />
         Year Group:
+        <br />
         <select name="year">
           value={formValues.year}
           <option value="Y7">Year 7</option>
@@ -151,6 +157,7 @@ function EditForm(props) {
         </select>
         <br />
         <label htmlFor="tba">Is exact time / date still to be agreed?</label>
+        <br />
         <select name="tba">
           <option value="yes">Yes</option>
           <option value="No">No</option>
@@ -161,6 +168,7 @@ function EditForm(props) {
           Date <span>&#40;leave blank if TBA</span>
           <span>&#41;</span>:
         </label>
+        <br />
         <input
           type="date"
           name="date"
@@ -171,6 +179,7 @@ function EditForm(props) {
           Start Time <span>&#40;leave blank if TBA</span>
           <span>&#41;</span>:
         </label>
+        <br />
         <input
           type="time"
           name="startTime"
@@ -181,6 +190,7 @@ function EditForm(props) {
           Finish Time <span>&#40;leave blank if TBA</span>
           <span>&#41;</span>:
         </label>
+        <br />
         <input
           type="time"
           name="finishTime"
@@ -188,6 +198,7 @@ function EditForm(props) {
         />
         <br />
         Commitment:
+        <br />
         <select name="commitment">
           value={formValues.commitment}
           <option value="Ongoing">Ongoing</option>
@@ -206,6 +217,7 @@ function EditForm(props) {
         </select>
         <br />
         Location:
+        <br />
         <select name="location">
           value={formValues.location}
           <option value="At School / College">At School / College</option>
@@ -217,6 +229,7 @@ function EditForm(props) {
         </select>
         <br />
         Type:
+        <br />
         <select name="type">
           value={formValues.type}
           <option value="Mock Interviews">Mock Interviews</option>
@@ -240,6 +253,7 @@ function EditForm(props) {
         </select>
         <br />
         Additional Info:
+        <br />
         <textarea
           type="text"
           rows="4"
