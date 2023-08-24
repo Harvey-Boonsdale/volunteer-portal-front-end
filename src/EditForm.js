@@ -48,9 +48,6 @@ function EditForm(props) {
     navigate("/");
   };
 
-  // check value going in
-  console.log(formValues.school);
-
   return (
     <div className="inputForm">
       <p>Edit Opportunity</p>
@@ -66,8 +63,11 @@ function EditForm(props) {
         <br />
         <label for="school">School / College:</label>
         <br />
-        <select name="school">
+        <select
+          name="school"
           value={formValues.school}
+          onChange={(opportunity) => handleChange(opportunity)}
+        >
           <option value="All Saints Catholic High School">
             All Saints Catholic High School
           </option>
@@ -135,33 +135,37 @@ function EditForm(props) {
           cols="50"
           name="details"
           value={formValues.details}
-          onChange={(opportunity) => handleChange(opportunity)}
         />
         <br />
         Year Group:
         <br />
-        <select name="year">
+        <select
+          name="year"
           value={formValues.year}
-          <option value="Y7">Year 7</option>
-          <option value="Y8">Year 8</option>
-          <option value="Y9">Year 9</option>
-          <option value="Y10">Year 10</option>
-          <option value="Y11">Year 11</option>
-          <option value="Y12">Year 12</option>
-          <option value="Y13">Year 13</option>
-          <option value="Y13">Year 14</option>
+          onChange={(opportunity) => handleChange(opportunity)}
+        >
+          <option value="Year 7">Year 7</option>
+          <option value="Year 8">Year 8</option>
+          <option value="Year 9">Year 9</option>
+          <option value="Year 10">Year 10</option>
+          <option value="Year 11">Year 11</option>
+          <option value="Year 12">Year 12</option>
+          <option value="Year 13">Year 13</option>
+          <option value="Year 14">Year 14</option>
           <option value="Sixth Form College">Sixth Form College</option>
           <option value="various">Various Year Groups</option>
           <option value="other">Other</option>
-          onChange={(opportunity) => handleChange(opportunity)}
         </select>
         <br />
         <label htmlFor="tba">Is exact time / date still to be agreed?</label>
         <br />
-        <select name="tba">
+        <select
+          name="tba"
+          value={formValues.tba}
+          onChange={(opportunity) => handleChange(opportunity)}
+        >
           <option value="yes">Yes</option>
           <option value="No">No</option>
-          onChange={(opportunity) => handleChange(opportunity)}
         </select>
         <br />
         <label htmlFor="date">
@@ -172,6 +176,7 @@ function EditForm(props) {
         <input
           type="date"
           name="date"
+          value={formValues.date}
           onChange={(opportunity) => handleChange(opportunity)}
         />
         <br />
@@ -183,6 +188,7 @@ function EditForm(props) {
         <input
           type="time"
           name="startTime"
+          value={formValues.startTime}
           onChange={(opportunity) => handleChange(opportunity)}
         />
         <br />
@@ -194,13 +200,17 @@ function EditForm(props) {
         <input
           type="time"
           name="finishTime"
+          value={formValues.finishTime}
           onChange={(opportunity) => handleChange(opportunity)}
         />
         <br />
         Commitment:
         <br />
-        <select name="commitment">
+        <select
+          name="commitment"
           value={formValues.commitment}
+          onChange={(opportunity) => handleChange(opportunity)}
+        >
           <option value="Ongoing">Ongoing</option>
           <option value="To be agreed">To be agreed</option>
           <option value="1 hour">1 hour</option>
@@ -213,25 +223,29 @@ function EditForm(props) {
           <option value="5 hours">5 hours</option>
           <option value="6 hours">6 hours</option>
           <option value="7 hours">7 hours</option>
-          onChange={(opportunity) => handleChange(opportunity)}
         </select>
         <br />
         Location:
         <br />
-        <select name="location">
+        <select
+          name="location"
           value={formValues.location}
+          onChange={(opportunity) => handleChange(opportunity)}
+        >
           <option value="At School / College">At School / College</option>
           <option value="At your workplace">At your workplace</option>
           <option value="Remote">Remote</option>
           <option value="Other">Other</option>
           <option value="To be agreed">To be agreed</option>
-          onChange={(opportunity) => handleChange(opportunity)}
         </select>
         <br />
         Type:
         <br />
-        <select name="type">
+        <select
+          name="type"
           value={formValues.type}
+          onChange={(opportunity) => handleChange(opportunity)}
+        >
           <option value="Mock Interviews">Mock Interviews</option>
           <option value="Workplace Visit">Workplace Visit</option>
           <option value="Careers Talk">Careers Talk</option>
@@ -248,8 +262,8 @@ function EditForm(props) {
           <option value="Employability Skills Workshop">
             Employability Skills Workshop
           </option>
+          <option value="Careers Fair">Careers Fair</option>
           <option value="Other">Other</option>
-          onChange={(opportunity) => handleChange(opportunity)}
         </select>
         <br />
         Additional Info:
