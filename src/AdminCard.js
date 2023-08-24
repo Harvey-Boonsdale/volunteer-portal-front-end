@@ -3,8 +3,10 @@ import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import "./App.css";
 import { DateTime } from "luxon";
+import { useNavigate } from "react-router-dom";
 
 function AdminCard(props) {
+  const navigate = useNavigate();
   //Format date
 
   const isoString = props.postToDisplay.date;
@@ -18,6 +20,8 @@ function AdminCard(props) {
   const deleteHandler = async (e) => {
     props.client.deleteOpportunity(props.postToDisplay._id);
     props.listOpportunities();
+    alert("Opportunity Deleted");
+    navigate("/");
   };
 
   return (
