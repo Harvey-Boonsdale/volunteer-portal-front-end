@@ -8,6 +8,10 @@ function WelcomeText() {
         Click the button below to view our live opportunities or visit our
         website to find out more about our campaign.
       </p>
+      <p>
+        If you are an educator looking for volunteers to support for your
+        careers education activities, please use this form.
+      </p>
     </div>
   );
 }
