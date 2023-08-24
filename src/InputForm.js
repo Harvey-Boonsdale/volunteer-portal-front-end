@@ -193,6 +193,7 @@ function InputForm(props) {
           <option value="Employability Skills Workshop">
             Employability Skills Workshop
           </option>
+          <option value="Careers Fair">Careers Fair</option>
           <option value="Other">Other</option>
         </select>
         <br />
