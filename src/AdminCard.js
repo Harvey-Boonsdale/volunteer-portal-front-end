@@ -42,9 +42,11 @@ function AdminCard(props) {
             ) : (
               <div>
                 <strong>Date:</strong> {formattedDate}{" "}
-                <strong>Start Time: </strong>
-                {props.postToDisplay.startTime} <strong>Finish Time:</strong>{" "}
-                {props.postToDisplay.finishTime}
+                <p>
+                  <strong>Start Time: </strong>
+                  {props.postToDisplay.startTime} <strong>Finish Time:</strong>{" "}
+                  {props.postToDisplay.finishTime}
+                </p>
               </div>
             )}
           </Card.Text>

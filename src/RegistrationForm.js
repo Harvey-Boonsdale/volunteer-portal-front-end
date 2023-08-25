@@ -49,7 +49,7 @@ function RegistrationForm(props) {
   };
 
   return (
-    <div className="inputForm form">
+    <div className="inputForm">
       <Row className="col-md-10 col-lg-8">
         <h3>Please Provide Your Details to Register</h3>
         <h6>
