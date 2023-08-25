@@ -102,14 +102,14 @@ function InputForm(props) {
         <label htmlFor="year">Year Group: </label>
         <br />
         <select name="year">
-          <option value="Y7">Year 7</option>
-          <option value="Y8">Year 8</option>
-          <option value="Y9">Year 9</option>
-          <option value="Y10">Year 10</option>
-          <option value="Y11">Year 11</option>
-          <option value="Y12">Year 12</option>
-          <option value="Y13">Year 13</option>
-          <option value="Y13">Year 14</option>
+          <option value="Year 7">Year 7</option>
+          <option value="Year 8">Year 8</option>
+          <option value="Year 9">Year 9</option>
+          <option value="Year 10">Year 10</option>
+          <option value="Year 11">Year 11</option>
+          <option value="Year 12">Year 12</option>
+          <option value="Year 13">Year 13</option>
+          <option value="Year 14">Year 14</option>
           <option value="Sixth Form College">Sixth Form College</option>
           <option value="various">Various Year Groups</option>
           <option value="other">Other</option>
