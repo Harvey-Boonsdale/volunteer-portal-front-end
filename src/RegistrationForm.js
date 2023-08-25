@@ -7,6 +7,7 @@ import "./App.css";
 import Button from "react-bootstrap/Button";
 import emailjs from "@emailjs/browser";
 import Form from "react-bootstrap/Form";
+import Row from "react-bootstrap/esm/Row";
 
 function RegistrationForm(props) {
   const form = useRef();
@@ -48,57 +49,59 @@ function RegistrationForm(props) {
   };
 
   return (
-    <div className="inputForm">
-      <h3>Please Provide Your Details to Register</h3>
-      <h6>
-        Opportunity Name: {formValues.name} at {formValues.school}{" "}
-      </h6>
+    <div className="inputForm form">
+      <Row className="col-md-10 col-lg-8">
+        <h3>Please Provide Your Details to Register</h3>
+        <h6>
+          Opportunity Name: {formValues.name} at {formValues.school}{" "}
+        </h6>
 
-      <Form ref={form} onSubmit={(e) => submitHandler(e)}>
-        Full Name:
-        <br />
-        <textarea type="text" rows="1" cols="50" name="volName" required />
-        <br />
-        Employer / Business:
-        <br />
-        <textarea type="text" rows="1" cols="50" name="employer" required />
-        <br />
-        Job Title:
-        <br />
-        <textarea type="text" rows="1" cols="50" name="job" required />
-        <br />
-        Email Address:
-        <br />
-        <textarea type="email" rows="1" cols="50" name="email" required />
-        <br />
-        Contact Number:
-        <br />
-        <textarea
-          type="text"
-          rows="1"
-          cols="50"
-          name="contactNumber"
-          required
-        />
-        <br />
-        Opportunity:
-        <br />
-        <input type="text" name="name" value={formValues.name} />
-        <br />
-        School / College:
-        <br />
-        <input type="text" name="school" value={formValues.school} />
-        <br />
-        <br />
-        <Button
-          type="submit"
-          disabled={false}
-          className="link btn btn-primary sibiButton"
-        >
-          {" "}
-          Submit{" "}
-        </Button>
-      </Form>
+        <Form ref={form} onSubmit={(e) => submitHandler(e)}>
+          Full Name:
+          <br />
+          <textarea type="text" rows="1" cols="40" name="volName" required />
+          <br />
+          Employer / Business:
+          <br />
+          <textarea type="text" rows="1" cols="40" name="employer" required />
+          <br />
+          Job Title:
+          <br />
+          <textarea type="text" rows="1" cols="40" name="job" required />
+          <br />
+          Email Address:
+          <br />
+          <textarea type="email" rows="1" cols="40" name="email" required />
+          <br />
+          Contact Number:
+          <br />
+          <textarea
+            type="text"
+            rows="1"
+            cols="40"
+            name="contactNumber"
+            required
+          />
+          <br />
+          Opportunity:
+          <br />
+          <input type="text" name="name" value={formValues.name} />
+          <br />
+          School / College:
+          <br />
+          <input type="text" name="school" value={formValues.school} />
+          <br />
+          <br />
+          <Button
+            type="submit"
+            disabled={false}
+            className="link btn btn-primary sibiButton"
+          >
+            {" "}
+            Submit{" "}
+          </Button>
+        </Form>
+      </Row>
     </div>
   );
 }
