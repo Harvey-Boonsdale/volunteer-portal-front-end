@@ -1,6 +1,8 @@
 import axios from "axios";
-// const url = "http://localhost:3001/";
-const url = "https://volunteer-portal-api.onrender.com/";
+const url =
+  process.env.NODE_ENV === "production"
+    ? "https://volunteer-portal-api.onrender.com/"
+    : "http://localhost:3001/";
 
 export class ApiClient {
   authenticatedCall(method, url, data) {
@@ -56,7 +58,8 @@ export class ApiClient {
     commitment,
     location,
     type,
-    info
+    info,
+    createdAt
   ) {
     return this.authenticatedCall("post", url + "opportunities", {
       name,
@@ -70,6 +73,7 @@ export class ApiClient {
       location,
       type,
       info,
+      createdAt,
     });
   }
 
