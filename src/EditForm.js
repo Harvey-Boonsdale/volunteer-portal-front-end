@@ -167,19 +167,8 @@ function EditForm(props) {
             <option value="other">Other</option>
           </select>
           <br />
-          <label htmlFor="tba">Is exact time / date still to be agreed?</label>
-          <br />
-          <select
-            name="tba"
-            value={formValues.tba}
-            onChange={(opportunity) => handleChange(opportunity)}
-          >
-            <option value="yes">Yes</option>
-            <option value="No">No</option>
-          </select>
-          <br />
           <label htmlFor="date">
-            Date <span>&#40;leave blank if TBA</span>
+            Date <span>&#40;leave blank if not known / flexible</span>
             <span>&#41;</span>:
           </label>
           <br />
@@ -191,7 +180,7 @@ function EditForm(props) {
           />
           <br />
           <label htmlFor="startTime">
-            Start Time <span>&#40;leave blank if TBA</span>
+            Start Time <span>&#40;leave blank if not known / flexible</span>
             <span>&#41;</span>:
           </label>
           <br />
@@ -203,7 +192,7 @@ function EditForm(props) {
           />
           <br />
           <label htmlFor="finishTime">
-            Finish Time <span>&#40;leave blank if TBA</span>
+            Finish Time <span>&#40;leave blank if not known / flexible</span>
             <span>&#41;</span>:
           </label>
           <br />
