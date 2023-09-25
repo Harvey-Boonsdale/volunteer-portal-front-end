@@ -105,6 +105,7 @@ function EditForm(props) {
             </option>
             <option value="Meadowhead School">Meadowhead School</option>
             <option value="Mercia School">Mercia School</option>
+            <option value="Newfield School">Newfield School</option>
             <option value="Notre Dame High School">
               Notre Dame High School
             </option>
