@@ -13,7 +13,11 @@ function AdminDashboard(props) {
         </Link>
       </div>
       <div>
-        <Link size="lg" className="link btn btn-primary sibiButton" to="view">
+        <Link
+          size="lg"
+          className="link btn btn-primary sibiButton"
+          to="/#/view"
+        >
           Edit Opportunities
         </Link>
       </div>

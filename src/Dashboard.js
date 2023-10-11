@@ -5,8 +5,10 @@ import Row from "react-bootstrap/Row";
 import "./App.css";
 import OpportunityCard from "./OpportunityCard";
 import AdminCard from "./AdminCard";
+import BackButton from "./BackButton";
 
 function Dashboard(props) {
+  <BackButton />;
   useEffect(() => {
     props.listOpportunities();
   }, []);

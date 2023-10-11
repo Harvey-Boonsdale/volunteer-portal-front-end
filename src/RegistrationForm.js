@@ -8,6 +8,7 @@ import Button from "react-bootstrap/Button";
 import emailjs from "@emailjs/browser";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/esm/Row";
+import BackButton from "./BackButton";
 
 function RegistrationForm(props) {
   const form = useRef();
@@ -50,6 +51,8 @@ function RegistrationForm(props) {
 
   return (
     <div className="inputForm">
+      <BackButton />
+      <br />
       <Row className="col-md-10 col-lg-8">
         <h3>Please Provide Your Details to Register</h3>
         <h6>
