@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/esm/Row";
+import BackButton from "./BackButton";
 
 // Form populated with opportunity to edit
 
@@ -51,6 +52,7 @@ function EditForm(props) {
 
   return (
     <div className="inputForm">
+      <BackButton />
       <Row className="col-md-10 col-lg-8">
         <h3>Edit Opportunity</h3>
         <Form onSubmit={(e) => submitHandler(e)} id="editForm">

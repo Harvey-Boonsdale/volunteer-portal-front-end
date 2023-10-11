@@ -6,7 +6,6 @@ import { Routes, Route } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import { ApiClient } from "./apiClient";
 import Login from "./Login";
-import Header from "./Header";
 
 import LandingPage from "./LandingPage";
 import InputForm from "./InputForm";
@@ -14,6 +13,7 @@ import EditForm from "./EditForm";
 
 import AdminDashboard from "./AdminDashboard";
 import RegistrationForm from "./RegistrationForm";
+import BackButton from "./BackButton";
 
 // initialise properties of opportunity card
 
@@ -61,7 +61,6 @@ function App() {
 
   return (
     <>
-      <Header />
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route

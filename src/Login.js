@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import React, { useState } from "react";
+import Header from "./Header";
 
 function Login(props) {
   const [disabled, changeDisabled] = useState(false);
@@ -22,6 +23,7 @@ function Login(props) {
 
   return (
     <div className="landingPage">
+      <Header />
       <br />
       <h1>Login</h1>
       <br />
