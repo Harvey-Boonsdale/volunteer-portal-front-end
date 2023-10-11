@@ -173,6 +173,7 @@ function EditForm(props) {
             <option value="Sixth Form College">Sixth Form College</option>
             <option value="various">Various Year Groups</option>
             <option value="other">Other</option>
+            <option value="Primary">Primary</option>
           </select>
           <br />
           <label htmlFor="date">
