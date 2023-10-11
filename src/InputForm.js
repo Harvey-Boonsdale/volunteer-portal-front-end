@@ -32,7 +32,7 @@ function InputForm(props) {
         <Form onSubmit={(e) => submitHandler(e)} id="addForm">
           <label htmlFor="name">Opportunity Name:</label>
           <br />
-          <input type="text" name="name" />
+          <textarea type="text" cols="40" name="name" />
           <br />
           <label htmlFor="school">School / College:</label>
           <br />

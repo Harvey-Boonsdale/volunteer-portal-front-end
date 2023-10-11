@@ -56,8 +56,9 @@ function EditForm(props) {
         <Form onSubmit={(e) => submitHandler(e)} id="editForm">
           <label for="name">Opportunity Name:</label>
           <br />
-          <input
+          <textarea
             type="text"
+            cols="40"
             name="name"
             value={formValues.name}
             onChange={(opportunity) => handleChange(opportunity)}
@@ -153,6 +154,7 @@ function EditForm(props) {
             cols="40"
             name="details"
             value={formValues.details}
+            onChange={(opportunity) => handleChange(opportunity)}
           />
           <br />
           Year Group:
