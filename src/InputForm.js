@@ -99,6 +99,10 @@ function InputForm(props) {
             </option>
             <option value="Tapton">Tapton</option>
             <option value="The Sheffield College">The Sheffield College</option>
+            <option value="UTC - City">UTC - City</option>
+            <option value="UTC - Olympic Legacy Park">
+              UTC - Olympic Legacy Park
+            </option>
             <option value="Westfield School">Westfield School</option>
             <option value="Yewlands Academy">Yewlands Academy</option>
             <option value="multiple schools / colleges">
