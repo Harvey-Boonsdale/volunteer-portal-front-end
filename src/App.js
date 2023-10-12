@@ -14,6 +14,7 @@ import EditForm from "./EditForm";
 import AdminDashboard from "./AdminDashboard";
 import RegistrationForm from "./RegistrationForm";
 import BackButton from "./BackButton";
+import ThankYou from "./ThankYou";
 
 // initialise properties of opportunity card
 
@@ -110,6 +111,7 @@ function App() {
           path="/registration/:id"
           element={<RegistrationForm opportunities={opportunities} />}
         />
+        <Route path="/thankyou" element={<ThankYou />} />
       </Routes>
     </>
   );
