@@ -37,10 +37,7 @@ function RegistrationForm(props) {
       )
       .then(
         (result) => {
-          alert(
-            "Thank you for registering - the See it Be it Team will be in touch shortly"
-          );
-          navigate("/");
+          navigate("/thankyou");
         },
         (error) => {
           console.log(error.text);
@@ -53,7 +50,7 @@ function RegistrationForm(props) {
     <div className="inputForm">
       <BackButton />
       <br />
-      <Row className="col-md-10 col-lg-8">
+      <Row>
         <h3>Please Provide Your Details to Register</h3>
         <h6>
           Opportunity Name: {formValues.name} at {formValues.school}{" "}
@@ -62,37 +59,42 @@ function RegistrationForm(props) {
         <Form ref={form} onSubmit={(e) => submitHandler(e)}>
           Full Name:
           <br />
-          <textarea type="text" rows="1" cols="40" name="volName" required />
+          <textarea type="text" rows="1" cols="35" name="volName" required />
           <br />
           Employer / Business:
           <br />
-          <textarea type="text" rows="1" cols="40" name="employer" required />
+          <textarea type="text" rows="1" cols="35" name="employer" required />
           <br />
           Job Title:
           <br />
-          <textarea type="text" rows="1" cols="40" name="job" required />
+          <textarea type="text" rows="1" cols="35" name="job" required />
           <br />
           Email Address:
           <br />
-          <textarea type="email" rows="1" cols="40" name="email" required />
+          <textarea type="email" rows="1" cols="35" name="email" required />
           <br />
           Contact Number:
           <br />
           <textarea
             type="text"
             rows="1"
-            cols="40"
+            cols="35"
             name="contactNumber"
             required
           />
           <br />
           Opportunity:
           <br />
-          <input type="text" name="name" value={formValues.name} />
+          <input type="text" cols="35" name="name" value={formValues.name} />
           <br />
           School / College:
           <br />
-          <input type="text" name="school" value={formValues.school} />
+          <input
+            type="text"
+            cols="35"
+            name="school"
+            value={formValues.school}
+          />
           <br />
           <br />
           <Button
