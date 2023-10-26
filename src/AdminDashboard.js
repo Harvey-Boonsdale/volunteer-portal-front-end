@@ -12,15 +12,13 @@ function AdminDashboard(props) {
           Add Opportunity
         </Link>
       </div>
+      <br />
       <div>
-        <Link
-          size="lg"
-          className="link btn btn-primary sibiButton"
-          to="/#/view"
-        >
+        <Link size="lg" className="link btn btn-primary sibiButton" to="/view">
           Edit Opportunities
         </Link>
       </div>
+      <br />
       <Button variant="danger" onClick={() => props.logoutHandler()}>
         Log Out
       </Button>
