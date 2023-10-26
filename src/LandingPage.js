@@ -3,15 +3,16 @@ import "./App.css";
 import Header from "./Header";
 
 import ViewOpportunitiesButton from "./ViewOpportunitiesButton";
-import WelcomeText from "./WelcomeText";
+import AdminLoginButton from "./AdminLoginButton";
 import Footer from "./Footer";
 
 function LandingPage() {
   return (
     <div className="landingPage">
       <Header />
-      <WelcomeText />
       <ViewOpportunitiesButton />
+      <br />
+      <AdminLoginButton />
       <Footer />
     </div>
   );
