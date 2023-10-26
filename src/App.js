@@ -16,7 +16,6 @@ import ThankYou from "./ThankYou";
 
 function App() {
   const [token, changeToken] = useState(window.localStorage.getItem("token"));
-  console.log(token);
   const [opportunities, changeOpportunities] = useState([]);
   const logoutHandler = () => {
     window.localStorage.removeItem("token");

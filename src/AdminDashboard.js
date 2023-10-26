@@ -19,7 +19,7 @@ function AdminDashboard(props) {
         </Link>
       </div>
       <br />
-      <Button variant="danger" onClick={() => props.logoutHandler()}>
+      <Button variant="danger" onClick={() => props.logoutHandler()} to="/">
         Log Out
       </Button>
     </div>
