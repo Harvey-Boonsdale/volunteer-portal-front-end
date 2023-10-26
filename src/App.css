@@ -46,12 +46,11 @@ body {
 .footer {
   width: 100vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: right;
   padding: 0.5em;
   position: fixed;
   left: 0;
   bottom: 0;
-  right: 0;
 }
 
 .partnerLogos {

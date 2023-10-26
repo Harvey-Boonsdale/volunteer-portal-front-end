@@ -1,25 +1,22 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import { ApiClient } from "./apiClient";
 import Login from "./Login";
-
 import LandingPage from "./LandingPage";
 import InputForm from "./InputForm";
 import EditForm from "./EditForm";
-
 import AdminDashboard from "./AdminDashboard";
 import RegistrationForm from "./RegistrationForm";
-import BackButton from "./BackButton";
 import ThankYou from "./ThankYou";
 
 // initialise properties of opportunity card
 
 function App() {
   const [token, changeToken] = useState(window.localStorage.getItem("token"));
+  console.log(token);
   const [opportunities, changeOpportunities] = useState([]);
   const logoutHandler = () => {
     window.localStorage.removeItem("token");
