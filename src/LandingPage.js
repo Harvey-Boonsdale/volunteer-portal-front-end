@@ -12,7 +12,7 @@ function LandingPage() {
     <div className="landingPage">
       <Header />
       <h1>Welcome to See it Be it in Sheffield</h1>
-      <h3>Your one stop shop for employer engagement in Careers Education!</h3>
+      <h2>Your one stop shop for employer engagement in Careers Education!</h2>
       <p>Please select from the options below:</p>
 
       <ViewOpportunitiesButton />
