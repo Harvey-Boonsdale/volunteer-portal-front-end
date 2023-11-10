@@ -90,6 +90,7 @@ function EditForm(props) {
             <option value="Ecclesfield School">Ecclesfield School</option>
             <option value="Firth Park Academy">Firth Park Academy</option>
             <option value="Forge Valley School">Forge Valley School</option>
+            <option value="Freeman College">Freeman College</option>
             <option value="Handsworth Grange Community Sports College">
               Handsworth Grange Community Sports College
             </option>
