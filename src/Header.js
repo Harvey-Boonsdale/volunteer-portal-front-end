@@ -1,12 +1,16 @@
 import SIBILogo from "./SIBILogo";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import PartnerLogos from "./PartnerLogos";
+import Row from "react-bootstrap/esm/Row";
 
 function Header() {
   return (
-    <div className="header">
+    <Row className="header">
       <SIBILogo />
-    </div>
+      <br />
+      <PartnerLogos />
+    </Row>
   );
 }
 

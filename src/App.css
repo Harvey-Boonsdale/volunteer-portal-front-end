@@ -14,16 +14,12 @@ body {
   right: 0;
 }
 
-.sibiLogo {
-  float: left;
-}
-
 .landingPage {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 20vh;
+  margin-top: 23vh;
   margin-left: 10vw;
   margin-right: 10vw;
   text-align: center;
@@ -81,10 +77,17 @@ body {
   align-items: center;
 }
 
-.adminLoginButton {
+.footerButton {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 1rem;
+}
+
+.accessibilityStatement {
+  padding-top: 1rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 
 .inputForm {

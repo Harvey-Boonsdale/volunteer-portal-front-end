@@ -1,11 +1,14 @@
-import PartnerLogos from "./PartnerLogos";
+import AccessibilityStatementButton from "./AccessibilityStatementButton";
+import AdminLoginButton from "./AdminLoginButton";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 function Footer() {
   return (
     <div className="footer">
-      <PartnerLogos />
+      <AccessibilityStatementButton />
+      <br />
+      <AdminLoginButton />
     </div>
   );
 }
