@@ -4,7 +4,6 @@ import Header from "./Header";
 import RequestVolunteersButton from "./RequestVolunteersButton";
 import ViewOpportunitiesButton from "./ViewOpportunitiesButton";
 import VisitWebsiteButton from "./VisitWebsiteButton";
-import AdminLoginButton from "./AdminLoginButton";
 import Footer from "./Footer";
 
 function LandingPage() {
@@ -21,7 +20,7 @@ function LandingPage() {
       <br />
       <VisitWebsiteButton />
       <br />
-      <AdminLoginButton />
+
       <Footer />
     </div>
   );

@@ -11,6 +11,7 @@ import EditForm from "./EditForm";
 import AdminDashboard from "./AdminDashboard";
 import RegistrationForm from "./RegistrationForm";
 import ThankYou from "./ThankYou";
+import AccessibilityStatement from "./AccessibilityStatement";
 
 // initialise properties of opportunity card
 
@@ -108,6 +109,7 @@ function App() {
           element={<RegistrationForm opportunities={opportunities} />}
         />
         <Route path="/thankyou" element={<ThankYou />} />
+        <Route path="/accessibility" element={<AccessibilityStatement />} />
       </Routes>
     </>
   );
