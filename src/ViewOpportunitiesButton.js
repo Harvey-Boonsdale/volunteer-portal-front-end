@@ -6,7 +6,7 @@ function ViewOpportunities() {
   return (
     <div>
       <Link size="lg" className="link btn btn-primary sibiButton" to="view">
-        View Opportunities
+        View live opportunities
       </Link>
     </div>
   );
