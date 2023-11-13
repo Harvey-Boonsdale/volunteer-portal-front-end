@@ -23,7 +23,7 @@ function OpportunityCard(props) {
 
   return (
     <div>
-      <Card>
+      <Card className="opportunityCard">
         <Card.Body>
           <Card.Title>
             <strong>
