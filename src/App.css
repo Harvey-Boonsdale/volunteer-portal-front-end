@@ -1,5 +1,5 @@
 body {
-  background-color: #cbc7c7;
+  background-color: #ffffff;
   margin: 0;
 }
 
@@ -28,6 +28,9 @@ body {
 .cardContainer {
   display: flex;
   justify-content: center;
+}
+.opportunityCard {
+  background-color: lightgray;
 }
 
 .cards.row {
