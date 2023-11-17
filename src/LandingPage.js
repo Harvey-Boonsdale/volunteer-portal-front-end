@@ -1,9 +1,11 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import Row from "react-bootstrap/esm/Row";
+import Col from "react-bootstrap/esm/Col";
 import Header from "./Header";
-import RequestVolunteersButton from "./RequestVolunteersButton";
-import ViewOpportunitiesButton from "./ViewOpportunitiesButton";
-import VisitWebsiteButton from "./VisitWebsiteButton";
+import LiveOpportunitiesCard from "./LiveOpportunitiesCard";
+import RequestVolunteersCard from "./RequestVolunteersCard";
+import VisitWebsiteCard from "./VisitWebsiteCard";
 import Footer from "./Footer";
 
 function LandingPage() {
@@ -12,16 +14,22 @@ function LandingPage() {
       <Header />
       <h1>Welcome to See it Be it in Sheffield</h1>
       <h2>Your one stop shop for employer engagement in Careers Education!</h2>
-      <p>Please select from the options below:</p>
-
-      <ViewOpportunitiesButton />
-      <br />
-      <RequestVolunteersButton />
-      <br />
-      <VisitWebsiteButton />
       <br />
 
-      <Footer />
+      <Row className="landingPageCards col-lg-12 col-md-10 col-lg-8">
+        <Col className="cardCol">
+          <LiveOpportunitiesCard />
+        </Col>
+        <Col className="cardCol">
+          <RequestVolunteersCard />
+        </Col>
+        <Col className="cardCol">
+          <VisitWebsiteCard />
+        </Col>
+      </Row>
+      <div className="footerWrapper">
+        <Footer />
+      </div>
     </div>
   );
 }
