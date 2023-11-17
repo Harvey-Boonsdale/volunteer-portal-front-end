@@ -44,16 +44,15 @@ body {
 
 .footer {
   width: 100vw;
-  display: flex;
-  justify-content: right;
-  padding: 0.5em;
   position: fixed;
-  left: 0;
   bottom: 0;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.partnerLogos {
-  max-width: 50px;
+.link {
+  margin: 5px;
+  text-decoration: none;
 }
 
 .sibiButton {
