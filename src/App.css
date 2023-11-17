@@ -8,7 +8,7 @@ body {
   justify-content: space-between;
   width: 100vw;
   padding: 0.5em;
-  position: fixed;
+  position: static;
   left: 0;
   top: 0;
   right: 0;
@@ -19,10 +19,13 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 23vh;
   margin-left: 10vw;
   margin-right: 10vw;
   text-align: center;
+}
+
+.landingPageCards {
+  display: flex;
 }
 
 .cardContainer {
@@ -42,9 +45,14 @@ body {
   padding: 1rem;
 }
 
+.footerWrapper {
+  position: static;
+  bottom: 0;
+}
+
 .footer {
   width: 100vw;
-  position: fixed;
+  position: relative;
   bottom: 0;
   display: flex;
   justify-content: flex-end;
