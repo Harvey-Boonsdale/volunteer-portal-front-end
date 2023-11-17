@@ -27,7 +27,11 @@ function AccessibilityStatement() {
         </li>
       </ul>
       <p>
-        <a href="https://mcmw.abilitynet.org.uk/" target="_blank">
+        <a
+          className="externalLink"
+          href="https://mcmw.abilitynet.org.uk/"
+          target="_blank"
+        >
           AbilityNet
         </a>{" "}
         has advice on making your device easier to use if you have a disability.
@@ -40,7 +44,7 @@ function AccessibilityStatement() {
       <ul>
         <li>
           email{" "}
-          <a href="mailto: seeitbeit@sheffield.gov.uk">
+          <a className="externalLink" href="mailto: seeitbeit@sheffield.gov.uk">
             {" "}
             seeitbeit@sheffield.gov.uk
           </a>
@@ -54,7 +58,7 @@ function AccessibilityStatement() {
         you find any problems not listed on this page or think we’re not meeting
         accessibility requirements, contact the See it be it in Sheffield team
         on{" "}
-        <a href="mailto: seeitbeit@sheffield.gov.uk">
+        <a className="externalLink" href="mailto: seeitbeit@sheffield.gov.uk">
           {" "}
           seeitbeit@sheffield.gov.uk
         </a>{" "}
@@ -66,7 +70,11 @@ function AccessibilityStatement() {
         (No. 2) Accessibility Regulations 2018 (the ‘accessibility
         regulations’). If you’re not happy with how we respond to your
         complaint, contact the{" "}
-        <a href="https://www.equalityadvisoryservice.com/" target="_blank">
+        <a
+          className="externalLink"
+          href="https://www.equalityadvisoryservice.com/"
+          target="_blank"
+        >
           Equality Advisory and Support Service (EASS).
         </a>
       </p>
@@ -81,6 +89,7 @@ function AccessibilityStatement() {
       </p>
       <p>
         <a
+          className="externalLink"
           href="https://seeitbeit.lifelonglearningandskills.org/get-involved/contact-us"
           target="_blank"
         >
@@ -96,7 +105,11 @@ function AccessibilityStatement() {
       <h2>Compliance status</h2>
       <p>
         This website is partially compliant with the{" "}
-        <a href="https://www.w3.org/TR/WCAG21/" target="_blank">
+        <a
+          className="externalLink"
+          href="https://www.w3.org/TR/WCAG21/"
+          target="_blank"
+        >
           Web Content Accessibility Guidelines version 2.1
         </a>{" "}
         AA standard and we are awaiting a full manual audit.
