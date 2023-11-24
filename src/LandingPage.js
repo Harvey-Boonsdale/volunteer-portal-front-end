@@ -1,12 +1,12 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import Row from "react-bootstrap/esm/Row";
-import Col from "react-bootstrap/esm/Col";
+import { Container, Row, Col } from "react-bootstrap";
 import Header from "./Header";
 import LiveOpportunitiesCard from "./LiveOpportunitiesCard";
 import RequestVolunteersCard from "./RequestVolunteersCard";
 import VisitWebsiteCard from "./VisitWebsiteCard";
-import Footer from "./Footer";
+
+import { Link } from "react-router-dom";
 
 function LandingPage() {
   return (
@@ -16,20 +16,27 @@ function LandingPage() {
       <h2>Your one stop shop for employer engagement in Careers Education!</h2>
       <br />
 
-      <Row className="landingPageCards col-lg-12 col-md-10 col-lg-8">
-        <Col className="cardCol">
-          <LiveOpportunitiesCard />
-        </Col>
-        <Col className="cardCol">
-          <RequestVolunteersCard />
-        </Col>
-        <Col className="cardCol">
-          <VisitWebsiteCard />
-        </Col>
+      <Container>
+        <Row>
+          <Col className="col-sm mb-3">
+            <LiveOpportunitiesCard />
+          </Col>
+          <Col className="col-sm mb-3">
+            <RequestVolunteersCard />
+          </Col>
+          <Col className="col-sm mb-3">
+            <VisitWebsiteCard />
+          </Col>
+        </Row>
+      </Container>
+      <Row>
+        <Link className="link" to="/accessibility">
+          Accessibility Statement
+        </Link>
+        <Link className="link" to="/login">
+          Admin Area
+        </Link>
       </Row>
-      <div className="footerWrapper">
-        <Footer />
-      </div>
     </div>
   );
 }

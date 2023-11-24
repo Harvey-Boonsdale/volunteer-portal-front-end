@@ -17,15 +17,18 @@ body {
 .landingPage {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+
   align-items: center;
+  text-align: center;
+  height: 100vh;
   margin-left: 10vw;
   margin-right: 10vw;
-  text-align: center;
 }
 
-.landingPageCards {
+.landingPageCard {
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .cardContainer {
@@ -43,19 +46,6 @@ body {
 
 .cardCol.col {
   padding: 1rem;
-}
-
-.footerWrapper {
-  position: static;
-  bottom: 0;
-}
-
-.footer {
-  width: 100vw;
-  position: relative;
-  bottom: 0;
-  display: flex;
-  justify-content: flex-end;
 }
 
 .link {
@@ -91,13 +81,6 @@ body {
   align-items: center;
 }
 
-.footerButton {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 1rem;
-}
-
 .accessibilityStatement {
   padding-top: 1rem;
   padding-left: 4rem;
@@ -109,6 +92,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 25vw;
-  margin-right: 25vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
 }

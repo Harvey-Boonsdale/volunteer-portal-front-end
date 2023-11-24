@@ -1,12 +1,13 @@
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 import "./App.css";
+import { Col, Row } from "react-bootstrap";
 
 function VisitWebsiteCard() {
   return (
-    <div>
-      <Card className="opportunityCard">
-        <Card.Body>
+    <Col className="h-100">
+      <Card className="opportunityCard h-100">
+        <Card.Body className="landingPageCard">
           <Card.Title>
             <strong>Find out More</strong>
           </Card.Title>
@@ -22,7 +23,7 @@ function VisitWebsiteCard() {
           </Link>
         </Card.Body>
       </Card>
-    </div>
+    </Col>
   );
 }
 

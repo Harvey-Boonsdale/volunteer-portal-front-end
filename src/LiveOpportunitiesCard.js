@@ -1,12 +1,13 @@
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 import "./App.css";
+import { Col, Row } from "react-bootstrap";
 
 function LiveOpportunitiesCard() {
   return (
-    <div>
-      <Card className="opportunityCard">
-        <Card.Body>
+    <Col className="h-100">
+      <Card className="opportunityCard h-100">
+        <Card.Body className="landingPageCard">
           <Card.Title>
             <strong>View Live Opportunities</strong>
           </Card.Title>
@@ -19,7 +20,7 @@ function LiveOpportunitiesCard() {
           </Link>
         </Card.Body>
       </Card>
-    </div>
+    </Col>
   );
 }
 
