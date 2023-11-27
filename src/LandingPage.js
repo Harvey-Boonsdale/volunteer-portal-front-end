@@ -17,14 +17,14 @@ function LandingPage() {
       <br />
 
       <Container>
-        <Row>
-          <Col className="col-sm mb-3">
+        <Row className="landingPageCardRow">
+          <Col className="col-sm mb-3 landingPageCardCol">
             <LiveOpportunitiesCard />
           </Col>
-          <Col className="col-sm mb-3">
+          <Col className="col-sm mb-3 landingPageCardCol">
             <RequestVolunteersCard />
           </Col>
-          <Col className="col-sm mb-3">
+          <Col className="col-sm mb-3 landingPageCardCol">
             <VisitWebsiteCard />
           </Col>
         </Row>

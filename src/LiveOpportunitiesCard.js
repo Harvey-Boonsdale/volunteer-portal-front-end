@@ -2,6 +2,7 @@ import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 import "./App.css";
 import { Col, Row } from "react-bootstrap";
+import volunteers from "./images/Volunteers.jpg";
 
 function LiveOpportunitiesCard() {
   return (
@@ -11,9 +12,14 @@ function LiveOpportunitiesCard() {
           <Card.Title>
             <strong>View Live Opportunities</strong>
           </Card.Title>
+          <br />
+          <Card.Img
+            src={volunteers}
+            alt="Two volunteers speaking to a student"
+          />
+          <br />
           <Card.Text>
-            View all of our current live opportunities and register to get
-            involved
+            View our current opportunities and register to get involved
           </Card.Text>
           <Link className="link btn btn-primary sibiButton" to={`/view`}>
             View Live Opportunities
