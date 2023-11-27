@@ -2,6 +2,7 @@ import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 import "./App.css";
 import { Col, Row } from "react-bootstrap";
+import teacher from "./images/Teacher.jpg";
 
 function VisitWebsiteCard() {
   return (
@@ -11,6 +12,10 @@ function VisitWebsiteCard() {
           <Card.Title>
             <strong>Find out More</strong>
           </Card.Title>
+          <br />
+
+          <Card.Img src={teacher} alt="Teacher in front of a school" />
+          <br />
           <Card.Text>
             Visit our website to find out more about See it Be it in Sheffield
           </Card.Text>
