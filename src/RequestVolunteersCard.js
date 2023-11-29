@@ -8,17 +8,16 @@ function RequestVolunteersCard() {
   return (
     <Col className="h-100">
       <Card className="opportunityCard h-100">
-        <Card.Body className="landingPageCard">
+        <Card.Img
+          src={assembly}
+          variant="top"
+          alt="Two volunteers talking to an assembly"
+        />
+        <Card.Body>
           <Card.Title>
             <strong>Request Volunteers</strong>
           </Card.Title>
-          <br />
 
-          <Card.Img
-            src={assembly}
-            alt="Two volunteers talking to an assembly"
-          />
-          <br />
           <Card.Text>
             Request volunteers for Careers Education activities in your setting
           </Card.Text>

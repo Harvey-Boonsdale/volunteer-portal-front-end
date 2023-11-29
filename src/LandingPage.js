@@ -16,7 +16,7 @@ function LandingPage() {
       <h2>Your one stop shop for employer engagement in Careers Education!</h2>
       <br />
 
-      <Container>
+      <Container fluid>
         <Row className="landingPageCardRow">
           <Col className="col-sm mb-3 landingPageCardCol">
             <LiveOpportunitiesCard />
