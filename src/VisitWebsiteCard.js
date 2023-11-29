@@ -8,14 +8,16 @@ function VisitWebsiteCard() {
   return (
     <Col className="h-100">
       <Card className="opportunityCard h-100">
-        <Card.Body className="landingPageCard">
+        <Card.Img
+          src={teacher}
+          variant="top"
+          alt="Teacher in front of a school"
+        />
+        <Card.Body>
           <Card.Title>
             <strong>Find out More</strong>
           </Card.Title>
-          <br />
 
-          <Card.Img src={teacher} alt="Teacher in front of a school" />
-          <br />
           <Card.Text>
             Visit our website to find out more about See it Be it in Sheffield
           </Card.Text>
