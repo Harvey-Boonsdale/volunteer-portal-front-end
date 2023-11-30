@@ -19,7 +19,7 @@ function VisitWebsiteCard() {
           </Card.Title>
 
           <Card.Text>
-            Visit our website to find out more about See it Be it in Sheffield
+            Visit our website to find out more about our campaign
           </Card.Text>
           <Link
             size="lg"

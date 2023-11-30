@@ -19,7 +19,7 @@ function RequestVolunteersCard() {
           </Card.Title>
 
           <Card.Text>
-            Request volunteers for Careers Education activities in your setting
+            Request volunteers for your Careers Education activities
           </Card.Text>
           <Link
             size="lg"
