@@ -15,7 +15,7 @@ function LiveOpportunitiesCard() {
         />
         <Card.Body>
           <Card.Title>
-            <strong>View Live Opportunities</strong>
+            <strong>Live Opportunities</strong>
           </Card.Title>
           <Card.Text>
             View our current opportunities and register to get involved

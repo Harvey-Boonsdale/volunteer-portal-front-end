@@ -5,10 +5,10 @@ import Row from "react-bootstrap/Row";
 import "./App.css";
 import OpportunityCard from "./OpportunityCard";
 import AdminCard from "./AdminCard";
-import BackButton from "./BackButton";
+import Header from "./Header";
+import SIBILogo from "./SIBILogo";
 
 function Dashboard(props) {
-  <BackButton />;
   useEffect(() => {
     props.listOpportunities();
   }, []);
@@ -42,8 +42,17 @@ function Dashboard(props) {
   //print opportunity card
 
   return (
-    <div className="cardContainer">
-      <Row className="cards">{makeOpportunities()}</Row>
+    <div>
+      <Row>
+        <Col className="header">
+          <SIBILogo />
+        </Col>
+      </Row>
+      <Row className="cardContainer">
+        <Col>
+          <Row className="cards">{makeOpportunities()}</Row>
+        </Col>
+      </Row>
     </div>
   );
 }
