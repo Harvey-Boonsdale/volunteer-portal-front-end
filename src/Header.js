@@ -6,7 +6,7 @@ import Row from "react-bootstrap/esm/Row";
 
 function Header() {
   return (
-    <Row className="header">
+    <Row>
       <SIBILogo />
     </Row>
   );
