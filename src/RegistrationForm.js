@@ -75,13 +75,11 @@ function RegistrationForm(props) {
           <br />
           Contact Number:
           <br />
-          <textarea
-            type="text"
-            rows="1"
-            cols="35"
-            name="contactNumber"
-            required
-          />
+          <textarea type="text" rows="1" cols="35" name="contactNumber" />
+          <br />
+          Any questions for us or info we need to know?:
+          <br />
+          <textarea type="text" rows="3" cols="35" name="addInfo" />
           <br />
           Opportunity:
           <br />
