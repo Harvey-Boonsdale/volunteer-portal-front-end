@@ -54,6 +54,7 @@ function InputForm(props) {
             <option value="Chaucer School">Chaucer School</option>
             <option value="Discovery Academy">Discovery Academy</option>
             <option value="Ecclesfield School">Ecclesfield School</option>
+            <option value="Fir Vale">Fir Vale</option>
             <option value="Firth Park Academy">Firth Park Academy</option>
             <option value="Forge Valley School">Forge Valley School</option>
             <option value="Freeman College">Freeman College</option>
@@ -86,6 +87,7 @@ function InputForm(props) {
             <option value="Parkwood Academy">Parkwood Academy</option>
             <option value="Seven Hills School">Seven Hills School</option>
             <option value="Sheaf Training">Sheaf Training</option>
+            <option value="Sheffield High School">Sheffield High School</option>
             <option value="Sheffield Inclusion Centre">
               Sheffield Inclusion Centre
             </option>
@@ -111,7 +113,18 @@ function InputForm(props) {
             <option value="multiple schools / colleges">
               Multiple Schools / Colleges
             </option>
-            <option value="other">Other</option>
+            <option value="Primary School (details in additional info)">
+              Primary School
+            </option>
+            <option value="Training Provider (details in additional info)">
+              Training Provider
+            </option>
+            <option value="Youth Hub (details in additional info)">
+              Youth Hub
+            </option>
+            <option value="Other Institution (details in additional info)">
+              Other
+            </option>
           </select>
           <br />
           <label htmlFor="details">Details:</label>
@@ -208,6 +221,7 @@ function InputForm(props) {
               Employability Skills Workshop
             </option>
             <option value="Careers Fair">Careers Fair</option>
+            <option value="Networking">Networking</option>
             <option value="Other">Other</option>
           </select>
           <br />
