@@ -81,20 +81,26 @@ function RegistrationForm(props) {
           <br />
           <textarea type="text" rows="3" cols="35" name="addInfo" />
           <br />
-          Opportunity:
-          <br />
-          <input type="text" cols="35" name="name" value={formValues.name} />
-          <br />
-          School / College:
-          <br />
-          <input
-            type="text"
-            cols="35"
-            name="school"
-            value={formValues.school}
-          />
-          <br />
-          <br />
+          <p hidden>
+            Opportunity:
+            <br />
+            <input type="text" cols="35" name="name" value={formValues.name} />
+            <br />
+            School / College:
+            <br />
+            <input
+              type="text"
+              cols="35"
+              name="school"
+              value={formValues.school}
+            />
+            <br />
+            <br />
+            Date:
+            <br />
+            <input type="date" cols="35" name="date" value={formValues.date} />
+            <br />
+          </p>
           <Button
             type="submit"
             disabled={false}
