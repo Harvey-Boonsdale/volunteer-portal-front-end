@@ -43,10 +43,6 @@ function InputForm(props) {
               All Saints Catholic High School
             </option>
             <option value="Astrea Academy">Astrea Academy</option>
-            <option value="Becton - Kenwood Centre">
-              Becton - Kenwood Centre
-            </option>
-            <option value="Becton">Becton</option>
             <option value="Bents Green School">Bents Green School</option>
             <option value="Birley Academy">Birley Academy</option>
             <option value="Bradfield School">Bradfield School</option>
@@ -69,6 +65,7 @@ function InputForm(props) {
             <option value="Holgate Meadows School">
               Holgate Meadows School
             </option>
+            <option value="Kenwood Academy">Kenwood Academy</option>
             <option value="King Ecgbert School">King Ecgbert School</option>
             <option value="King Edward VII">King Edward VII</option>
             <option value="Longley Park Sixth Form College">
